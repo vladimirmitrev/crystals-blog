@@ -5,16 +5,17 @@ import Header from './components/header/Header';
 import Login from "./components/login/Login";
 // import Logout from "./components/logout/Logout";
 import Register from "./components/register/Register";
+import Path from "./paths";
 
 function App() {
 
   return (
     <>
     <Header />
-    <h1>Crystals blog</h1>
     <Routes>
-    <Route path="/login" element={<Login/>}/>
-    <Route path="/register" element={<Register />}/>
+        {/* <Route path={Path.Home} element={<Home />}/> */}
+        <Route path={Path.Login} element={<Login/>}/>
+        <Route path={Path.Register} element={<Register />}/>
     </Routes>
     </>
   )

@@ -7,10 +7,14 @@ const Path = {
     Login: 'login',
     Register: 'register',
     Logout: 'logout',
-    GameEdit: '/crystals/:crystalId/edit',
-    GameDelete: '/crystals/:crystalId/delete',
-    Games: '/crystals',
-    GameDetails: '/crystals/:crystalId',
+    CrystalEdit: '/crystals/:crystalId/edit',
+    CrystalDelete: '/crystals/:crystalId/delete',
+    Crystals: '/crystals',
+    CrystalsCreate: '/crystals/create',
+    CrystalDetails: '/crystals/:crystalId',
+    About: '/about',
+    Contact: '/contact',
+    Search: '/search',
 }
 
 export default Path;

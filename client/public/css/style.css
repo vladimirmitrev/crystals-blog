@@ -465,3 +465,7 @@ body {
     padding-right: 0;
     border-right: none;
 }
+
+.navbar-light .navbar-nav .nav-link {
+    font-size: 20px;
+}
