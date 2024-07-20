@@ -14,7 +14,7 @@ const Header = () => {
         <div>
           <nav className="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
             <Link href="" className="navbar-brand p-0">
-                <h1 className="text-primary m-0"><img src="img/logo.png" alt="Logo" style={{height: '35px'}} />Crystals Blog</h1>
+                <h2 className="text-primary m-0"><img src="img/logo.png" alt="Logo" style={{height: '35px'}} />Crystals Blog</h2>
             </Link>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span className="fa fa-bars"></span>
