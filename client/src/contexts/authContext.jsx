@@ -1,6 +1,7 @@
-import { createContext } from 'react';
+import { createContext, useContext } from 'react';
 import { useNavigate } from "react-router-dom";
 // import { useState } from "react";
+import { types, NotificationContext } from './NotificationContext';
 
 import * as authService from '../services/authService';
 import Path from '../paths';
@@ -13,6 +14,8 @@ export const AuthProvider = ({
  }) => {
   const navigate = useNavigate();
   const [auth, setAuth] = usePersistedState('auth', {});
+  const { showNotification } = useContext(NotificationContext);
+//   console.log(showNotification);
 
   const loginSubmitHandler = async (values) => {
     try {
@@ -21,28 +24,26 @@ export const AuthProvider = ({
       setAuth(result);
   
       localStorage.setItem('accessToken', result.accessToken);
+      showNotification('You logged in successfully!', types.success);
   
       navigate(Path.Home);
-    } catch(error) {
-      console.log(error.message);
+    } catch(err) {
+      showNotification(err.message, types.error);
     }
      
   };
 
   const registerSubmitHandler = async (values) => {
-    if (values.password === values.confirmPassword) {
-      console.log(values);
-      const result = await authService.register(values.name, values.email, values.phone, values.password);
+        try {
+            const result =  await authService.register(values.name, values.email, values.phone, values.password);
+            setAuth(result);
 
-      setAuth(result);
-
-      localStorage.setItem('accessToken', result.accessToken);
-
-      navigate(Path.Home);
-    } else {
-      console.log('Passwords doesn`t match');
-      return navigate(Path.Register);
-    }
+            localStorage.setItem('accessToken', result.accessToken);
+            showNotification('You signed up successfully!', types.success);
+            navigate(Path.Home);
+        } catch (err) {
+        showNotification(err.message, types.error);
+        }
   };
 
   const logoutHandler = () => {

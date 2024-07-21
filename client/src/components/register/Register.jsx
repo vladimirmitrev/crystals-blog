@@ -33,7 +33,7 @@ const Register = () => {
     }),
     onSubmit: (values) => {
       registerSubmitHandler(values);
-      console.log(values);
+      // console.log(values);
     },
   });
   return (

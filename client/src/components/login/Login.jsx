@@ -22,7 +22,7 @@ const Login = () => {
     }),
     onSubmit: (values) => {
       loginSubmitHandler(values);
-      console.log(values);
+      // console.log(values);
     },
   });
 
