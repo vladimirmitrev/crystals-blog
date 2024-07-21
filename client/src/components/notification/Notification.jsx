@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 
-import './Notification.module.css';
+import styles from'./Notification.module.css';
 import { NotificationContext } from '../../contexts/NotificationContext';
 
 
@@ -10,11 +10,11 @@ const Notification = () => {
 
     return (
         <div className={`notification ${notification.type}`} onClick={ hideNotification }>
-            <p className="notification-message">
+            <p className={styles.notificationMessage}>
                 
                 { notification.message }
                 { notification.message !== ''
-                    ? <span className="notification-close">&#10799;</span>
+                    ? <span className={styles.notificationClose}>&#10799;</span>
                     : 'НЯМА ГРЕШКА' }
             </p>
         </div>

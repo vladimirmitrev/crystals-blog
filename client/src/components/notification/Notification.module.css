@@ -24,11 +24,11 @@
     background-color: rgba(0, 0, 0, .3);
 }
 
-.notification-message {
+.notificationMessage {
     letter-spacing: 1px;
 }
 
-.notification-close {
+.notificationClose {
     position: absolute;
     top: 20px;
     right: 20px;

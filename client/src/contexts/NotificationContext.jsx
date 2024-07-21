@@ -24,7 +24,7 @@ export const NotificationProvider = ({ children }) => {
 
         setTimeout(() => {
             setNotification(initialNotificationState);
-        }, 5000);
+        }, 100000);
     }, []);
 
     const hideNotification = useCallback(() => {

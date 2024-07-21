@@ -32,6 +32,7 @@ const Login = () => {
         data-wow-delay="2s"
       >
         <form onSubmit={formik.handleSubmit}>
+          <h1>Login</h1>
           <div className="row g-3">
             <div className="col-12">
               <div className="form-floating">
