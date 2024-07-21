@@ -4,8 +4,8 @@
 
 const Path = {
     Home: '/',
-    Login: 'login',
-    Register: 'register',
+    Login: '/login',
+    Register: '/register',
     Logout: 'logout',
     CrystalEdit: '/crystals/:crystalId/edit',
     CrystalDelete: '/crystals/:crystalId/delete',
