@@ -5,3 +5,9 @@
 .loginLink {
     color: rgb(13, 140, 204);
 }
+
+.inputError {
+    color: red;
+    margin-top: 0.5rem !important;
+    margin-bottom: 0 !important
+}
