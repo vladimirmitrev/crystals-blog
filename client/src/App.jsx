@@ -6,9 +6,9 @@ import Path from './paths';
 
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
-import Login from './components/login/Login';
-import Register from './components/register/Register';
-import Logout from './components/logout/Logout';
+import Login from './components/auth/login/Login';
+import Register from './components/auth/register/Register';
+import Logout from './components/auth/logout/Logout';
 import AuthGuard from './components/guards/AuthGuard';
 import GuestGuard from './components/guards/GuestGuard';
 import Notification from './components/notification/Notification'

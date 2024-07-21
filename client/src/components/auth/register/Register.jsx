@@ -1,7 +1,7 @@
 import { useContext } from 'react';
-import AuthContext from '../../contexts/authContext';
+import AuthContext from '../../../contexts/authContext';
 import { Link } from 'react-router-dom';
-import Path from '../../paths';
+import Path from '../../../paths';
 import styles from './Register.module.css';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
