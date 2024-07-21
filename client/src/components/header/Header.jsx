@@ -8,6 +8,8 @@ const Header = () => {
     const {
         isAuthenticated,
         email,
+        name,
+        phone,
     } = useContext(AuthContext);
 
     return (

@@ -12,14 +12,18 @@ const Register = () => {
     initialValues: {
       name: '',
       email: '',
+      phone: '',
       password: '',
       confirmPassword: '',
     },
     validationSchema: Yup.object({
       name: Yup.string()
+        .min(6, 'Name should be at least 6 characters')
         .max(30, 'Name should be no longer than 30 characters')
         .required('Name is required'),
       email: Yup.string().email('Invalid email address').required('Email is required'),
+      phone: Yup.string().required('Phone is required').matches(/^[+]?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{2}[-\s.]?[0-9]{4,7}$/im, 'Must be valid phone number'),
+      // phone: Yup.number().required('Phone is required'),
       password: Yup.string()
         .min(6, 'Password should be at least 6 characters')
         .max(32, 'Password should be no longer than 30 characters').required('Password is required'),
@@ -74,6 +78,24 @@ const Register = () => {
                 <p className={styles.inputError}>{formik.errors.email}</p>
               ) : null}
               <label htmlFor="email">Your Email</label>
+            </div>
+          </div>
+          <div className="col-12">
+            <div className="form-floating">
+              <input
+                type="number"
+                className="form-control"
+                id="phone"
+                placeholder="Your phone"
+                name="phone"
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                value={formik.values.phone}
+              />
+              {formik.touched.phone && formik.errors.phone ? (
+                <p className={styles.inputError}>{formik.errors.phone}</p>
+              ) : null}
+              <label htmlFor="phone">Your Phone</label>
             </div>
           </div>
           <div className="col-12">

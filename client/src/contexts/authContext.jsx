@@ -32,7 +32,7 @@ export const AuthProvider = ({
   const registerSubmitHandler = async (values) => {
     if (values.password === values.confirmPassword) {
       console.log(values);
-      const result = await authService.register(values.email, values.password);
+      const result = await authService.register(values.name, values.email, values.phone, values.password);
 
       setAuth(result);
 
@@ -59,7 +59,8 @@ export const AuthProvider = ({
     email: auth.email,
     isAuthenticated: !!auth.accessToken,
     userId: auth._id,
-    // name: auth.name
+    name: auth.name,
+    phone: auth.phone,
   };
   return (
     <AuthContext.Provider value={values}>{children}</AuthContext.Provider>
