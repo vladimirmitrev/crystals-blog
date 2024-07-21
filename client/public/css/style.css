@@ -23,12 +23,12 @@
     );
 }
 body {
-    background-image: url('../img/background-4.png');
-    background-attachment: fixed;
+    /* background-image: url('../img/background-4.png'); */
+    /* background-attachment: fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
+    background-size: cover; */
 }
 .fw-medium {
     font-weight: 600 !important;

@@ -22,3 +22,8 @@
     /* transform: rotate(360deg);
     transition: all 1000ms; */
 }
+.welcome {
+    font-size: 20px;
+    color: blueviolet;
+    margin-right: 1rem;
+}

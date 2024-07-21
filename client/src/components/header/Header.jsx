@@ -5,10 +5,10 @@ import Path from "../../paths";
 import styles from './Header.module.css';
 
 const Header = () => {
-    // const {
-    //     isAuthenticated,
-    //     email,
-    // } = useContext(AuthContext);
+    const {
+        isAuthenticated,
+        email,
+    } = useContext(AuthContext);
 
     return (
         <div>
@@ -23,14 +23,23 @@ const Header = () => {
                 <div className="navbar-nav ms-auto py-0">
                     <Link to={Path.Home} className="nav-item nav-link">Home</Link>
                     <Link to={Path.Crystals} className="nav-item nav-link">Crystals</Link>
+                    {isAuthenticated && (
                     <Link to={Path.CrystalsCreate} className="nav-item nav-link">Publish crystal</Link>
+                    )}
                     <Link to={Path.Search} className="nav-item nav-link">Search</Link>
                     <Link to={Path.Contact} className="nav-item nav-link">Contact</Link>
                     <Link to={Path.About} className="nav-item nav-link">About Us</Link>
                 </div>
-                    <Link to={Path.Register} className={`btn btn-primary rounded-pill py-2 px-4 mx-1 ${styles.btnGradient}`}>Register</Link>
-                    <Link to={Path.Login} className={`btn btn-primary rounded-pill py-2 px-4 mx-1 ${styles.btnGradient}`}>Login</Link>
-                    <Link to={Path.Logout} className={`btn btn-primary rounded-pill py-2 px-4 mx-1 ${styles.btnGradient}`}>Logout</Link>
+                    <span className={styles.welcome}>Welcome {!isAuthenticated ? 'Guest' : email}</span>
+                    {!isAuthenticated && (
+                        <div className="guestButtons">
+                            <Link to={Path.Register} className={`btn btn-primary rounded-pill py-2 px-4 mx-1 ${styles.btnGradient}`}>Register</Link>
+                            <Link to={Path.Login} className={`btn btn-primary rounded-pill py-2 px-4 mx-1 ${styles.btnGradient}`}>Login</Link>
+                        </div>
+                    )}
+                    {isAuthenticated && (
+                        <Link to={Path.Logout} className={`btn btn-primary rounded-pill py-2 px-4 mx-1 ${styles.btnGradient}`}>Logout</Link>
+                    )}
             </div>
         </nav>
           </div>
