@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import Path from "../../../paths";
 import { pathToUrl } from "../../../utils/pathUtils";
 import styles from './LatestCrystalsItem.module.css';
+import { faPalette} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const LatestsCrystalsItem = ({
     _id,
@@ -16,7 +18,7 @@ const LatestsCrystalsItem = ({
     <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
             <div className="package-item">
               <div className="overflow-hidden">
-                <img className="img-fluid" src={imageUrl} alt="Crystal Image" />
+                <img className={`img-fluid ${styles.cardImage}`} src={imageUrl} alt="Crystal Image" />
               </div>
               <div className="d-flex border-bottom">
                 <small className="flex-fill text-center border-end py-2">
@@ -24,7 +26,8 @@ const LatestsCrystalsItem = ({
                   {name}
                 </small>
                 <small className="flex-fill text-center border-end py-2">
-                  <i className="fa fa-calendar-alt text-primary me-2"></i>{color}
+                  {/* <i className="fa fa-calendar-alt text-primary me-2"></i> {color} */}
+                  <FontAwesomeIcon icon={faPalette} /> {color}
                 </small>
                 <small className="flex-fill text-center py-2">
                   <i className="fa fa-user text-primary me-2"></i>{rarity}

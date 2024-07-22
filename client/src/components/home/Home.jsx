@@ -20,10 +20,10 @@ const Home = ({
     <div className="container-xxl py-5">
       <div className="container">
         <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
-        <h6 className="section-title bg-white text-center text-primary px-3">
-            Crystals
+        <h6 className="section-title h3 bg-white text-center text-primary px-3 my-3">
+            Latest Crystals
           </h6>
-          <h1 className="mb-5">Latest Crystals</h1>
+          {/* <h1 className="mb-5">Latest Crystals</h1> */}
         </div>
         <div className="row g-4 justify-content-center">
           {latestCrystals.map((crystal) => (
@@ -31,7 +31,10 @@ const Home = ({
           ))}
           {/* <!-- Display paragraph: If there is no crystals  --> */}
           {!latestCrystals.length && (
-            <p className="h1">No crystals yet</p>
+            <div>
+              <p className="h2 text-danger text-center">Sorry there are no added crystals yet</p>
+              <p className="h2 text-danger text-center">:\</p>
+            </div>
           )}
         </div>
       </div>

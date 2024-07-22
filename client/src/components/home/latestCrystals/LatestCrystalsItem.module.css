@@ -1,3 +1,9 @@
 .latestCard {
     margin: 10rem auto;
 }
+
+.cardImage {
+    max-width: 30rem;
+    max-height: 17rem;
+    background-size: cover;
+}

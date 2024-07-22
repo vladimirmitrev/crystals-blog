@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-
+import { Suspense } from 'react';
 import { AuthProvider } from './contexts/authContext';
 import { NotificationProvider } from './contexts/NotificationContext'
 import Path from './paths';
@@ -15,6 +15,7 @@ import GuestGuard from './components/guards/GuestGuard';
 import Notification from './components/notification/Notification'
 import CrystalCreate from './components/crystals/create/CrystalCreate';
 import EnhancedHome from './components/home/Home';
+import Loading from './components/loading/Loading';
 
 function App() {
   return (
@@ -22,6 +23,8 @@ function App() {
     <AuthProvider>
       <div className={`min-vh-100 ${styles.homeScreen}`}>
         <Header />
+        {/* <Suspense fallback={<h1 style={{color: 'black'}}>Loading...</h1>}> */}
+        <Suspense fallback={<Loading />}>
         <Notification />
         <Routes>
           <Route path={Path.Home} element={<EnhancedHome />}/>
@@ -34,6 +37,7 @@ function App() {
             <Route path={Path.CrystalsCreate} element={<CrystalCreate />} />
           </Route>
         </Routes>
+        </Suspense>
         <Footer />
       </div>
     </AuthProvider>
