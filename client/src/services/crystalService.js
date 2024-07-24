@@ -46,7 +46,7 @@ export const getLatest = async () => {
     const query = new URLSearchParams({
         // sortBy: `_createdOn`, //+ desc
         offSet: 0,
-        pageSize: 3,
+        pageSize: 5,
     })
     // const query = encodeURIComponent(`offset=0&pageSize=3`);
     console.log(query);
