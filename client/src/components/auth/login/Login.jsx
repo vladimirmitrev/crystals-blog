@@ -28,7 +28,7 @@ const Login = () => {
 
   return (
     <div
-        className={`col-lg-4 col-md-12 wow fadeInUp ${styles.loginForm}`}
+        className={`col-lg-4 col-md-12 wow slideInRight animated ${styles.loginForm}`}
         data-wow-delay="2s"
       >
         <form onSubmit={formik.handleSubmit}>

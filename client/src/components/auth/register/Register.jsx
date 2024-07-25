@@ -38,7 +38,7 @@ const Register = () => {
   });
   return (
     <div
-      className={`col-lg-4 col-md-12 wow fadeInUp ${styles.registerForm}`}
+      className={`col-lg-4 col-md-12 wow animated slideInLeft ${styles.registerForm}`}
       data-wow-delay="2s"
     >
       <form onSubmit={formik.handleSubmit}>

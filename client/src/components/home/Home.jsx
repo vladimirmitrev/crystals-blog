@@ -30,7 +30,7 @@ const Home = ({
 
   return (
     <div>
-      <div className="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+      <div className="container-xxl py-5 wow" data-wow-delay="0.1s">
         <div className="container">
           <div className="text-center">
             <h1 className="mb-5 text-dark mt-3">
@@ -48,7 +48,7 @@ const Home = ({
                 </div>
           ) : latestCrystals.length ? (
             <OwlCarousel
-              className="owl-theme"
+              className="owl-theme slideInRight animated"
               items={3}
               autoplay={true}
               smartSpeed={1000}
