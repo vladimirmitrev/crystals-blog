@@ -17,6 +17,7 @@ import CrystalCreate from './components/crystals/create/CrystalCreate';
 import EnhancedHome from './components/home/Home';
 import Loading from './components/loading/Loading';
 import CrystalCatalog from './components/crystals/catalog/CrystalCatalog';
+import CrystalDetails from './components/crystals/crystal-details/CrystalDetails';
 
 function App() {
   return (
@@ -30,6 +31,8 @@ function App() {
         <Routes>
           <Route path={Path.Home} element={<EnhancedHome />}/>
           <Route path={Path.Crystals} element={<CrystalCatalog />}/>
+          <Route path={Path.CrystalDetails} element={<CrystalDetails />} />
+
           <Route element={<GuestGuard />}>
             <Route path={Path.Login} element={<Login />} />
             <Route path={Path.Register} element={<Register />} />

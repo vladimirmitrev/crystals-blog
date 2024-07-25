@@ -1,13 +1,14 @@
 import {Link} from 'react-router-dom';
 import styles from './CrystalCatalogItem.module.css';
-import { faPalette} from "@fortawesome/free-solid-svg-icons";
+import { faGem } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Path from '../../../../paths';
+import { pathToUrl } from '../../../../utils/pathUtils';
 const GameListItem = ({
     _id,
     name, 
     imageUrl, 
-    color, 
-    appearance,
+    rarity, 
 }) => {
     return (
         <div className="col-lg-3 col-md-6 wow slideInUp animated" data-wow-delay="0.1s">
@@ -20,11 +21,13 @@ const GameListItem = ({
                     <a className="btn btn-square mx-1" href=""><i className="fab fa-twitter"></i></a>
                     <a className="btn btn-square mx-1" href=""><i className="fab fa-instagram"></i></a>
                 </div> */}
-                <div className="text-center p-4">
+                <div className="text-center">
                     <h5 className="mb-0">{name}</h5>
-                    <small><FontAwesomeIcon icon={faPalette} /> {color}</small>
+                    <small><FontAwesomeIcon icon={faGem} /> {rarity}</small>
                 </div>
-                <Link to={`/crystals/${_id}`} className="btn btn-primary rounded-3 mb-2">More details</Link>
+                <Link to={pathToUrl(Path.CrystalDetails, {crystalId: _id})} 
+                    className="btn details-btn btn-primary rounded-3 mt-2 mb-3">More details
+                </Link>
             </div>
         </div>
     );
