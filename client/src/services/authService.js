@@ -1,6 +1,4 @@
-import { redirect } from 'react-router-dom';
 import * as request from '../lib/request';
-
 
 const BASE_URL = 'http://localhost:3030/users'
 // const BASE_URL = `${import.meta.env.VITE_API_URL}/users`;
@@ -27,4 +25,11 @@ export const register = (name, email, phone, password) => request.post(`${BASE_U
     password,
 });
 
-export const logout = () => request.get(`${BASE_URL}/logout`);
+export const logout = async () => {
+    try {
+       await request.get(`${BASE_URL}/logout`);
+
+    } catch (error) {
+        console.log(error.message);
+    }
+} 
