@@ -4,16 +4,23 @@ import CrystalCatalogItem from "./CrystalCatalogItem/CrystalCatalogItem";
 import styles from './CrystalCatalog.module.css';
 
 const CrystalCatalog = () => {
-    const [crystals, setCrystals] = useState([]);
-
+    const [allCrystals, setAllCrystals] = useState([]);
+    const [loading, setLoading] = useState(true);
+    
     useEffect(() => {
-        crystalService.getAll()
-        .then(result => setCrystals(result))
-        .catch(err => {
-            console.log(err);
-        });
-    },[]);
-
+        const fetchAllCrystals = async () => {
+          try {
+            const result = await crystalService.getAll();
+            setAllCrystals(result);
+          } catch (error) {
+            console.error('Error fetching crystals:', error);
+          } finally {
+            setLoading(false);
+          }
+        };
+    
+        fetchAllCrystals();
+      }, []);
     return (
         <div className="container-xxl py-5">
         <div className="container">
@@ -21,15 +28,26 @@ const CrystalCatalog = () => {
                 <h6 className="section-title bg-white text-center text-primary px-3 mt-3">Crystals Catalog</h6>
                 {/* <h1 className="mb-5">Meet Our Guide</h1> */}
             </div>
+            {loading ? (
+                <div id="spinner" className="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+                    <div className="spinner-border text-primary" style={{width: '3rem', height: '3rem'}} role="status">
+                        <span className="sr-only">Loading...</span>
+                    </div>
+                </div>
+          ) : allCrystals.length ? (
         <div className={`row g-4 mt-3 text-center ${styles.catalog}`}>
-            {crystals.map(crystal => (
+            {allCrystals.map(crystal => (
                 <CrystalCatalogItem key={crystal._id} {...crystal}/>
             ))}
-
-            {crystals.length === 0 && (
-                <h3 className="no-articles">No crystal yet</h3>
-            )}
         </div>
+          ) : (
+            <div>
+            <p className="h2 text-danger text-center">
+              Sorry there are no added crystals yet
+            </p>
+            <p className="h2 text-danger text-center">:\</p>
+          </div>
+        )}
         </div>
         </div>
     );

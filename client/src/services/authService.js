@@ -1,3 +1,4 @@
+import { redirect } from 'react-router-dom';
 import * as request from '../lib/request';
 
 
@@ -7,12 +8,16 @@ const BASE_URL = 'http://localhost:3030/users'
 export const login = async (email, password) => {
     // console.log(email);
     // console.log(password);
-   const result = await request.post(`${BASE_URL}/login`, {
-        email,
-        password,
-    });
-
-    return result;
+    try {
+        const result = await request.post(`${BASE_URL}/login`, {
+            email,
+            password,
+        });
+        return result;
+    } catch (error) {
+        console.log(error);
+    }
+  
 };
 
 export const register = (name, email, phone, password) => request.post(`${BASE_URL}/register`, {
