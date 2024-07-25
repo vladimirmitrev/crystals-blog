@@ -64,7 +64,7 @@ const CreateCrystal = () => {
   });
   return (
     <div
-      className={`col-lg-4 col-md-12 wow fadeInUp ${styles.createForm}`}
+      className={`col-lg-4 col-md-12 wow animated slideInRight ${styles.createForm}`}
       data-wow-delay="2s"
     >
       <form onSubmit={formik.handleSubmit}>

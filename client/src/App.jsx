@@ -16,6 +16,7 @@ import Notification from './components/notification/Notification'
 import CrystalCreate from './components/crystals/create/CrystalCreate';
 import EnhancedHome from './components/home/Home';
 import Loading from './components/loading/Loading';
+import CrystalCatalog from './components/crystals/catalog/CrystalCatalog';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Notification />
         <Routes>
           <Route path={Path.Home} element={<EnhancedHome />}/>
+          <Route path={Path.Crystals} element={<CrystalCatalog />}/>
           <Route element={<GuestGuard />}>
             <Route path={Path.Login} element={<Login />} />
             <Route path={Path.Register} element={<Register />} />
