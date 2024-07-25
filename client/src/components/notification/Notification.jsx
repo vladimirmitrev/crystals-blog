@@ -15,7 +15,7 @@ const Notification = () => {
                 { notification.message }
                 { notification.message !== ''
                     ? <span className={styles.notificationClose}>&#10799;</span>
-                    : 'НЯМА ГРЕШКА' }
+                    : '' }
             </p>
         </div>
     );

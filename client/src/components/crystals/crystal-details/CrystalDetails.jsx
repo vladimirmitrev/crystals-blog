@@ -11,10 +11,12 @@ import { faPalette, faGem, faShapes, faMagic, faMapMarked, faSpa } from "@fortaw
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useReducer, useState } from "react";
 import { useContext } from "react";
+import { NotificationContext, types } from '../../../contexts/NotificationContext';
 
 const CrystalDetails = () => {
     const navigate = useNavigate();
     const { email, userId } = useContext(AuthContext);
+    const { showNotification } = useContext(NotificationContext);
     const { crystalId } = useParams();
     const [crystal, setCrystal] = useState({});
     // const [comments, dispatch] = useReducer(reducer, []);
@@ -31,8 +33,23 @@ const CrystalDetails = () => {
         //         })
         //     });
     }, [crystalId]);
+
+    const deleteButtonClickHandler = async () => {
+        const hasConfirmed = confirm(`Are you sure you want to delete ${crystal.name}?`)
+        if (hasConfirmed) {
+            try {
+                await crystalService.remove(crystalId);
+
+                showNotification('You successfully delete a crystal!', types.success);
+                navigate(Path.Crystals);
+            } catch (err) {
+                showNotification(err.message, types.error);
+                console.log(err.message);
+            }
+        }
+    }
   return (
-    <div className={`col-lg-4 col-md-6 wow fadeInUp animated ${styles.detailsCard}`} data-wow-delay="0.1s">
+    <div className={`col-lg-4 col-md-6 wow zoomIn animated ${styles.detailsCard}`} data-wow-delay="0.1s">
             <div className="package-item">
                 <div className="overflow-hidden">
                 <img className={`img-fluid ${styles.cardImage}`} src={crystal.imageUrl} alt="Crystal Image" />
@@ -72,31 +89,16 @@ const CrystalDetails = () => {
                     <h6><FontAwesomeIcon icon={faMapMarked} /> Countries where can be found</h6>
                     <p>{crystal.source}</p>
                     <div className="d-flex justify-content-center mb-2">
-                    {/* <a href="#" className="btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
-                                    <a href="#" className="btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Book Now</a> */}
+                    { userId === crystal._ownerId && (
+                        <div className="buttons d-flex gap-3">
+                            <Link to={pathToUrl(Path.CrystalEdit, { crystalId})} className="btn details-btn btn-warning rounded-3 mt-2 mt-2 ml-3">Edit</Link>
+                            <button className="btn btn-danger rounded-3 mt-2 ml-3" onClick={deleteButtonClickHandler}>Delete</button>
+                        </div>
+                    )}
                     </div>
                 </div>
             </div>
           </div>
-    // <div
-    //   className={`col-lg-4 col-md-12 wow fadeInUp ${styles.latestCard}`}
-    //   data-wow-delay="2s"
-    // >
-    //   <div className="game">
-    //     <div className="image-wrap">
-    //       <img src={imageUrl} />
-    //     </div>
-    //     <h3>{name}</h3>
-    //     <div className="rating">
-    //       <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-    //     </div>
-    //     <div className="data-buttons">
-    //       <Link to={pathToUrl(Path.CrystalDetails, {crystalId: _id})} className="btn details-btn">
-    //         Details
-    //       </Link>
-    //     </div>
-    //   </div>
-    // </div>
   );
 };
 
