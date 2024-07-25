@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import withAuth from '../../HOC/withAuth';
 import * as crystalService from '../../services/crystalService';
-import LatestsCrystalsItem from './latestCrystals/latestCrystalsItem';
+import LatestsCrystalsItem from './latest-crystals/latestCrystalsItem';
 
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.min.css';
