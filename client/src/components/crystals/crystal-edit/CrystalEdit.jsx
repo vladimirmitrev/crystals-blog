@@ -7,9 +7,11 @@ import * as Yup from 'yup';
 import * as crystalService from '../../../services/crystalService';
 import { NotificationContext, types } from '../../../contexts/NotificationContext';
 import { pathToUrl } from '../../../utils/pathUtils';
+import AuthContext from '../../../contexts/authContext';
 
 const CrystalEdit = () => {
   const { showNotification } = useContext(NotificationContext);
+  const { loggedUserId } = useContext(AuthContext);
   const navigate = useNavigate();
   const { crystalId } = useParams();
   const [crystal, setCrystal] = useState({
@@ -21,12 +23,24 @@ const CrystalEdit = () => {
     healing : '',
     imageUrl : '',
   });
+  const [loading, setLoading] = useState(true); 
+
   useEffect(() => {
       crystalService.getOne(crystalId)
       .then(result => {
+        if (result._ownerId != loggedUserId) {
+          showNotification('You are not authorized to edit this crystal.', types.error);
+          navigate(Path.Crystals);
+        } else {
           setCrystal(result)
-        });
-    }, [crystalId]);
+        }
+        })
+        .catch(err => {
+          showNotification('Error fetching crystal data.', types.error);
+          navigate(Path.Crystals);
+        })
+        .finally(() => setLoading(false));
+    }, [crystalId, loggedUserId, navigate, showNotification]);
     
     const formik = useFormik({
         enableReinitialize: true,
@@ -80,6 +94,11 @@ const CrystalEdit = () => {
         }
     },
   });
+
+  if (loading) {
+    return <p>Loading...</p>;
+  }
+  
   return (
     <div
       className={`col-lg-4 col-md-12 wow animated slideInRight ${styles.editForm}`}
