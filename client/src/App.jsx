@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-import { Suspense } from 'react';
+import { lazy, Suspense } from 'react';
 import { AuthProvider } from './contexts/authContext';
 import { NotificationProvider } from './contexts/NotificationContext'
 import Path from './paths';
@@ -18,7 +18,8 @@ import CrystalEdit from './components/crystals/crystal-edit/CrystalEdit';
 import EnhancedHome from './components/home/Home';
 import Loading from './components/loading/Loading';
 import CrystalCatalog from './components/crystals/catalog/CrystalCatalog';
-import CrystalDetails from './components/crystals/crystal-details/CrystalDetails';
+// import CrystalDetails from './components/crystals/crystal-details/CrystalDetails';
+const CrystalDetails = lazy(() => import('./components/crystals/crystal-details/CrystalDetails'));
 
 function App() {
   return (
