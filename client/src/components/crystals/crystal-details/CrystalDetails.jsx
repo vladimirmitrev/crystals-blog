@@ -50,7 +50,10 @@ const CrystalDetails = () => {
     }
   return (
     <div className={`col-lg-4 col-md-6 wow zoomIn animated ${styles.detailsCard}`} data-wow-delay="0.1s">
-            <div className="package-item">
+             <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 className="section-title bg-white text-center text-primary px-3 mt-4">Crystal Details</h6>
+            </div>
+            <div className="package-item mt-3">
                 <div className="overflow-hidden">
                 <img className={`img-fluid ${styles.cardImage}`} src={crystal.imageUrl} alt="Crystal Image" />
                 </div>
@@ -88,7 +91,8 @@ const CrystalDetails = () => {
                     </p>
                     <h6><FontAwesomeIcon icon={faMapMarked} /> Countries where can be found</h6>
                     <p>{crystal.source}</p>
-                    <div className="d-flex justify-content-center mb-2">
+                    <div className="d-flex justify-content-center mb-2 gap-3">
+                        <Link to={Path.Crystals} className="btn details-btn btn-info rounded-3 mt-2 mt-2 ml-3">Go back to catalog</Link>
                     { userId === crystal._ownerId && (
                         <div className="buttons d-flex gap-3">
                             <Link to={pathToUrl(Path.CrystalEdit, { crystalId})} className="btn details-btn btn-warning rounded-3 mt-2 mt-2 ml-3">Edit</Link>
