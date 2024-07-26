@@ -28,6 +28,8 @@ export const AuthProvider = ({
   
       navigate(Path.Home);
     } catch(err) {
+      setAuth({});
+      localStorage.removeItem('accessToken');
       showNotification(err.message, types.error);
     }
      
@@ -42,6 +44,8 @@ export const AuthProvider = ({
             showNotification('You signed up successfully!', types.success);
             navigate(Path.Home);
         } catch (err) {
+          setAuth({})
+          localStorage.removeItem('accessToken');
         showNotification(err.message, types.error);
         }
   };
