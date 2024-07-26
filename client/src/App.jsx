@@ -14,6 +14,7 @@ import AuthGuard from './components/guards/AuthGuard';
 import GuestGuard from './components/guards/GuestGuard';
 import Notification from './components/notification/Notification'
 import CrystalCreate from './components/crystals/create/CrystalCreate';
+import CrystalEdit from './components/crystals/crystal-edit/CrystalEdit';
 import EnhancedHome from './components/home/Home';
 import Loading from './components/loading/Loading';
 import CrystalCatalog from './components/crystals/catalog/CrystalCatalog';
@@ -40,6 +41,7 @@ function App() {
           <Route element={<AuthGuard />}>
             <Route path={Path.Logout} element={<Logout />} />
             <Route path={Path.CrystalsCreate} element={<CrystalCreate />} />
+            <Route path={Path.CrystalEdit} element={<CrystalEdit />} />
           </Route>
         </Routes>
         </Suspense>
