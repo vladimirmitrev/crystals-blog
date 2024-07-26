@@ -1339,6 +1339,56 @@
     	}
     };
     var seedData = {
+        crystals: {
+    		"cbb585ae-e630-42b7-84a3-6c092a62842a": {
+    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                name: "Amethyst",
+                color: "Purple to lavender",
+                appearance: "Transparent. pointed crystals. May be geode, cluster. or single point. All sizes",
+                rarity: "One of the  most common crystals",
+                source: "United States, Britain, Canada, Brazil, Mexico, Russia, Sri Lanka, Uruguay, East Africa, Siberia, India",
+                healing: "Amethyst boosts production of hormones, and tunes the endocrine system and metabolism. It strengthens the cleansing and eliminating organs and the immune system. An excellent cleanser fo r the blood, Amethyst re l ieves physical, emotional, and  psychological pain or stress, and blocks geopathic stress. It eases headaches and releases tension. This stone red uces bruising, injuries, and swellings, and treats hearing disorders. It heals dis-eases of the lungs and respiratory  tract, skin co nditions, cellular disorders, and dis-eases of the digestive tract. It is beneficial for the intestines, regulating flora, removing parasites, and encouraging reabsorption of water. Amethyst treats insomnia and brings restful  sleep. At a  subtle level, Amethyst balances and connects the physical, mental, and emotional bodies*, linking them to the spiritual. It cleanses the aura* and transmutes negative energy, and stimulates the throat and crown chakras*. It is helpfu l for people about to make the transition through death. Amethyst can stabilize psychiatric conditions but should not be used in cases of paranoia or schizophrenia.",
+                imageUrl: "https://www.mindat.org/imagecache/95/6d/04297530017099816759006.jpg",
+                _createdOn: 1721667302811,
+                _id: "cbb585ae-e630-42b7-84a3-6c092a62842a"
+    		},
+    		"05682dfb-bfc2-4fbb-9785-958dc8453d65": {
+    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                name: "Aventurine",
+                color: "Green, blue, red, brown, peach",
+                appearance: "Opaque, speckled with shiny particles, all sizes, often tumbled",
+                rarity: "Readily available",
+                source: "Italy, Brazil, China, India, Russia, Tibet. Nepal",
+                healing: "Aventurine benefits the thymus gland, connective tissue, and nervous system; it balances blood pressure  and stimulates the metabolism, lowering cholesterol and  preventing arteriosclerosis and heart attacks. It has an anti-inflammatory effect and helps ease skin eruptions and  allergies, relieves migraine headaches, and soothes the eyes. Aventurine heals the adrenals, lungs, sinuses, heart and muscular and urogenital systems. As an elixir, it relieves skin problems.",
+                imageUrl: "https://ancient-infusions.com/cdn/shop/articles/green-aventurine-crystal-benefits-luck-abundance-heart-healing-emotional-balance.png",
+                _createdOn: 1721669429347,
+                _id: "05682dfb-bfc2-4fbb-9785-958dc8453d65"
+    		},
+            "334aad36-39d6-41fb-84de-ced140762d82": {
+    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                name: "Agate",
+                color: "Clear or milky white, gray, blue, green, pink, brown, often artificially colored",
+                appearance: "Waxy and soft, usually banded, sometimes translucent with small crystals, va rious sizes. Often sold as artificially colored slices that have no additional therapeutic properties",
+                rarity: "Common",
+                source: "United States, India, Morocco, Czech Republic, Brazil, Africa",
+                healing: "Agate stabilizes the aura*, eliminating and transforming negative energies",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpQy0JwUoA_v-vMniJWFdIXm84PqsltyvEag&s",
+                _createdOn: 1721670361880,
+                _id: "334aad36-39d6-41fb-84de-ced140762d82"
+    		},
+            "27be0627-0703-4dc3-814f-bb09e50e3783": {
+    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                name: "Lapis Lazuli",
+                color: "Deep blue flecked with gold",
+                appearance: "Dense, veined, Lapis Lazuli looks like the night sky. All sizes, sometimes tumbled",
+                rarity: "Easily obtained but expensive",
+                source: "Russia, Afghanistan, Chile, Italy, United States, Egypt Middle East",
+                healing: "La pis Lazuli alleviates pain, especially that of migraine headaches. It overcomes depression, benefits the respiratory and nervous systems and the throat, larynx, and thyroid, cleanses organs, bone marrow, thymus, and the immune system. La pis Lazuli overcomes hearing loss, purifies blood, and boosts the immune system. It alleviates insomnia a J vertigo, and  lowers blood pressure",
+                imageUrl: "https://cdn11.bigcommerce.com/s-74zp6w28re/images/stencil/1280x1280/products/6163/36906/new-moon-beginnings-raw-lapis-lazuli-stone-a-quality-crr-aa618__51940.1635554640.jpg?c=1",
+                _createdOn: 1721917040956,
+                _id: "27be0627-0703-4dc3-814f-bb09e50e3783"
+    		},
+    	},
     	recipes: {
     		"3987279d-0ad4-4afb-8ca9-5b256ae3b298": {
     			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
