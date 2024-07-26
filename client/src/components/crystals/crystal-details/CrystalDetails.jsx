@@ -1,16 +1,16 @@
+import { useEffect,  useContext, useState } from "react";
+// import { useContext } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
+import CrystalComments from "./comments/CrystalComments";
 import { pathToUrl } from "../../../utils/pathUtils";
 import AuthContext from "../../../contexts/authContext";
 import Path from "../../../paths";
-// import {} from '../../../services/crystalService';
-import * as crystalService from '../../../services/crystalService'
+import * as crystalService from '../../../services/crystalService';
 
 import styles from './CrystalDetails.module.css';
 import { faPalette, faGem, faShapes, faMagic, faMapMarked, faSpa } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useEffect, useReducer, useState } from "react";
-import { useContext } from "react";
 import { NotificationContext, types } from '../../../contexts/NotificationContext';
 
 const CrystalDetails = () => {
@@ -19,19 +19,11 @@ const CrystalDetails = () => {
     const { showNotification } = useContext(NotificationContext);
     const { crystalId } = useParams();
     const [crystal, setCrystal] = useState({});
-    // const [comments, dispatch] = useReducer(reducer, []);
 
     useEffect(() => {
         crystalService.getOne(crystalId)
             .then(setCrystal);
-
-        // commentService.getAll(crystalId)
-        //     .then((result) => {
-        //         dispatch({
-        //             type: 'GET_ALL_COMMENTS',
-        //             payload: result,
-        //         })
-        //     });
+            
     }, [crystalId]);
 
     const deleteButtonClickHandler = async () => {
@@ -91,6 +83,9 @@ const CrystalDetails = () => {
                     </p>
                     <h6><FontAwesomeIcon icon={faMapMarked} /> Countries where can be found</h6>
                     <p>{crystal.source}</p>
+
+                    <CrystalComments />
+
                     <div className="d-flex justify-content-center mb-2 gap-3">
                         <Link to={Path.Crystals} className="btn details-btn btn-info rounded-3 mt-2 mt-2 ml-3">Go back to catalog</Link>
                     { userId === crystal._ownerId && (
