@@ -12,6 +12,7 @@ import styles from './CrystalDetails.module.css';
 import { faPalette, faGem, faShapes, faMagic, faMapMarked, faSpa } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { NotificationContext, types } from '../../../contexts/NotificationContext';
+import CrystalLikes from "./crystal-likes/CrystalLikes";
 
 const CrystalDetails = () => {
     const navigate = useNavigate();
@@ -49,7 +50,10 @@ const CrystalDetails = () => {
                 <div className="overflow-hidden">
                 <img className={`img-fluid ${styles.cardImage}`} src={crystal.imageUrl} alt="Crystal Image" />
                 </div>
-                <h3 className="text-center mt-1 mb-1">{crystal.name}</h3>
+                <div className="d-flex justify-content-around">
+                <h3 className="text-center ml-3 mt-1 mb-1">{crystal.name}</h3>
+                <CrystalLikes key={crystalId} { ...crystal}/>
+                </div>
                 {/* <div className="d-flex border-bottom">
                     <small className="flex-fill text-center border-end py-2">
                     <FontAwesomeIcon icon={faPalette} />

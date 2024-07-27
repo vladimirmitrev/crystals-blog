@@ -80,7 +80,7 @@ const CrystalComments = () => {
   return (
     <>
       <div className={styles.commentsDiv}>
-        <h5>Comments from users:</h5>
+      <h5>Comments from users ({comments.length}):</h5>
         <ul className={styles.commentsUl}>
           {comments.map(({ _id, text, owner: { email, name }, _createdOn }) => (
             <li key={_id} className={styles.commentLi}>
