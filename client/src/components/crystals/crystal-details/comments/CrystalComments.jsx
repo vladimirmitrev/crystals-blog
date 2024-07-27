@@ -86,7 +86,7 @@ const CrystalComments = () => {
             <li key={_id} className={styles.commentLi}>
               <p className={styles.date}>{formatDate(_createdOn)}</p>
               <p className={styles.commentP}>
-                {name ? name : email}: <span className={styles.commentText}>{text}</span>
+                {name ? name : email.split('@')[0]}: <span className={styles.commentText}>{text}</span>
               </p>
             </li>
           ))}
