@@ -86,7 +86,7 @@ const CrystalDetails = () => {
 
                     <CrystalComments />
 
-                    <div className="d-flex justify-content-center mb-2 gap-3">
+                    <div className="d-flex justify-content-center mt-3 mb-2 gap-3">
                         <Link to={Path.Crystals} className="btn details-btn btn-info rounded-3 mt-2 mt-2 ml-3">Go back to catalog</Link>
                     { userId === crystal._ownerId && (
                         <div className="buttons d-flex gap-3">
