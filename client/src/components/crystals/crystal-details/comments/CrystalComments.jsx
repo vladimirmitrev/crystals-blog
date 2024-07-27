@@ -5,22 +5,22 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 
 import AuthContext from "../../../../contexts/authContext";
-import useForm from "../../../../hooks/useForm";
+// import useForm from "../../../../hooks/useForm";
 import styles from './CrystalComments.module.css';
 
 
 import * as commentService from '../../../../services/commentService';
 import reducer from "./commentReducer";
 import { NotificationContext, types } from '../../../../contexts/NotificationContext';
-import Path from "../../../../paths";
-import { pathToUrl } from "../../../../utils/pathUtils";
+// import Path from "../../../../paths";
+// import { pathToUrl } from "../../../../utils/pathUtils";
 
 const CrystalComments = () => {
     const { crystalId } = useParams();
     const { email, userId, isAuthenticated } = useContext(AuthContext);
     const [comments, dispatch] = useReducer(reducer, []);
     const { showNotification } = useContext(NotificationContext);
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
 
     useEffect(() => {
@@ -40,7 +40,7 @@ const CrystalComments = () => {
       validationSchema: Yup.object({
         text: Yup.string()
           .min(6, 'Comment should be at least 6 characters')
-          .max(30, 'Comment should be no longer than 30 characters')
+          .max(256, 'Comment should be no longer than 256 characters')
       
       }),
       onSubmit: async (values) => {
@@ -50,58 +50,43 @@ const CrystalComments = () => {
               crystalId,
               values.text,
            );
-          //  console.log(comm);
   
            newComment.owner = { email };
-          //  setComments(state => [...state, {...newComment, owner: { email }}]);
           dispatch({
               type: 'ADD_COMMENT',
               payload: newComment
           })
           values.text = '';
               showNotification('You successfully added a new comment!', types.success);
-              navigate(pathToUrl(Path.CrystalDetails, { crystalId }));
+              // navigate(pathToUrl(Path.CrystalDetails, { crystalId }));
           } catch (err) {
               showNotification(err.message, types.error);
               console.log(err);
           }
       },
     });
+    const formatDate = (timestamp) => {
+        const date = new Date(timestamp);
+        const formattedDate = date.toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit',
+          });
+        return formattedDate; // Customize this format if needed
+    };
 
-    // const addCommentHandler = async (values) => {
-
-    //     // e.preventDefault();
-
-    //     // const formData = new FormData(e.currentTarget);
-
-
-    //     const newComment = await commentService.create(
-    //         crystalId,
-    //         values.comment,
-    //      );
-
-    //      newComment.owner = { email };
-    //     //  setComments(state => [...state, {...newComment, owner: { email }}]);
-    //     dispatch({
-    //         type: 'ADD_COMMENT',
-    //         payload: newComment
-    //     })
-    //     values.comment = '';
-    // }
-    // const initialValues = useMemo(() => ({
-    //     comment: '',
-    // }), []);
-
-    // const { values, onChange, onSubmit } = useForm(addCommentHandler, initialValues);
   return (
     <>
-      <div className="details-comments">
-        <h5>Comments:</h5>
-        <ul>
-          {comments.map(({ _id, text, owner: { email } }) => (
-            <li key={_id} className="comment">
-              <p>
-                {email}: {text}
+      <div className={styles.commentsDiv}>
+        <h5>Comments from users:</h5>
+        <ul className={styles.commentsUl}>
+          {comments.map(({ _id, text, owner: { email, name }, _createdOn }) => (
+            <li key={_id} className={styles.commentLi}>
+              <p className={styles.date}>{formatDate(_createdOn)}</p>
+              <p className={styles.commentP}>
+                {name ? name : email}: <span className={styles.commentText}>{text}</span>
               </p>
             </li>
           ))}
@@ -110,7 +95,6 @@ const CrystalComments = () => {
       </div>
 
       {isAuthenticated && (
-        <>
         <form onSubmit={formik.handleSubmit}>
             <div className="col-12">
                 <div className="form-floating">
@@ -134,21 +118,6 @@ const CrystalComments = () => {
                 </div>
             </div>
         </form>
-        {/* <div className="create-comment">
-          <label>Add new comment:</label>
-          <form className="form d-flex flex-column" onSubmit={onSubmit}>
-            <input type="text" name="username" placeholder="Type username"/>
-            <textarea
-              name="comment"
-              value={values.comment}
-              onChange={onChange}
-              placeholder="Comment......"
-              minLength={5}
-            ></textarea>
-            <input className="btn btn-primary submit" name="commentInput" type="submit" value="Add Comment" />
-          </form>
-        </div> */}
-      </>
       )}      
     </>
   );
