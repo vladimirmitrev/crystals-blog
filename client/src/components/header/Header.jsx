@@ -4,6 +4,9 @@ import AuthContext from "../../contexts/authContext";
 import Path from "../../paths";
 import styles from './Header.module.css';
 
+import { faUser } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 const Header = () => {
     const {
         isAuthenticated,
@@ -27,10 +30,13 @@ const Header = () => {
                     <Link to={Path.Crystals} className="nav-item nav-link">Crystals</Link>
                     {isAuthenticated && (
                     <Link to={Path.CrystalsCreate} className="nav-item nav-link">Publish crystal</Link>
-                    )}
+                )}
                     <Link to={Path.Search} className="nav-item nav-link">Search</Link>
                     <Link to={Path.Contact} className="nav-item nav-link">Contact</Link>
                     <Link to={Path.About} className="nav-item nav-link">About Us</Link>
+                    {isAuthenticated && (
+                    <Link to={Path.MyProfile} className="nav-item nav-link"><FontAwesomeIcon icon={faUser} /> My Profile</Link>
+                    )}
                 </div>
                     <span className={styles.welcome}>Welcome {!isAuthenticated ? 'Guest' : email}</span>
                     {!isAuthenticated && (

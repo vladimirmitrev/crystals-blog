@@ -15,6 +15,7 @@ const Path = {
     About: '/about',
     Contact: '/contact',
     Search: '/search',
+    MyProfile: '/profile'
 }
 
 export default Path;

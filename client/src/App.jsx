@@ -18,6 +18,7 @@ import CrystalEdit from './components/crystals/crystal-edit/CrystalEdit';
 import EnhancedHome from './components/home/Home';
 import Loading from './components/loading/Loading';
 import CrystalCatalog from './components/crystals/catalog/CrystalCatalog';
+import UserProfile from './components/userProfile/UserProfile';
 // import CrystalDetails from './components/crystals/crystal-details/CrystalDetails';
 const CrystalDetails = lazy(() => import('./components/crystals/crystal-details/CrystalDetails'));
 
@@ -43,6 +44,7 @@ function App() {
             <Route path={Path.Logout} element={<Logout />} />
             <Route path={Path.CrystalsCreate} element={<CrystalCreate />} />
             <Route path={Path.CrystalEdit} element={<CrystalEdit />} />
+            <Route path={Path.MyProfile} element={<UserProfile />} />
           </Route>
         </Routes>
         </Suspense>

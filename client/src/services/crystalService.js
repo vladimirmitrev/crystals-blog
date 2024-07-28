@@ -54,4 +54,17 @@ export const getLatest = async () => {
     // const result =  await request.get(`${BASE_URL}?${query}`);
 
     return result;
-} 
+}
+export const getByOwnerId = async (_ownerId) => {
+    try {
+        const query = new URLSearchParams({
+            where: `_ownerId="${_ownerId}"`
+        }).toString();
+
+        const result = await request.get(`${BASE_URL}?${query}`);
+        return result;
+    } catch (error) {
+        console.error('Error fetching crystals by owner ID:', error);
+        throw error;
+    }
+};

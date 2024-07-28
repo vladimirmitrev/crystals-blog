@@ -4,7 +4,7 @@ import { faGem } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Path from '../../../../paths';
 import { pathToUrl } from '../../../../utils/pathUtils';
-const GameListItem = ({
+const CrystalCatalogItem = ({
     _id,
     name, 
     imageUrl, 
@@ -33,4 +33,4 @@ const GameListItem = ({
     );
 }
 
-export default GameListItem;
+export default CrystalCatalogItem;
