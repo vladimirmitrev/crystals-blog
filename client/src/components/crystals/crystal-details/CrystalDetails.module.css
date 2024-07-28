@@ -7,3 +7,8 @@
     max-height: 17rem;
     background-size: cover;
 }
+.nameAndLikes {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}

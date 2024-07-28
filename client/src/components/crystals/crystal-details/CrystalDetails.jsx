@@ -50,8 +50,8 @@ const CrystalDetails = () => {
                 <div className="overflow-hidden">
                 <img className={`img-fluid ${styles.cardImage}`} src={crystal.imageUrl} alt="Crystal Image" />
                 </div>
-                <div className="d-flex justify-content-around">
-                <h3 className="text-center ml-3 mt-1 mb-1">{crystal.name}</h3>
+                <div className={styles.nameAndLikes}>
+                <h3 className="text-center ml-3 mt-1 mb-1 px-2">{crystal.name}</h3>
                 <CrystalLikes key={crystalId} { ...crystal}/>
                 </div>
                 {/* <div className="d-flex border-bottom">
