@@ -38,7 +38,7 @@ const Header = () => {
                     <Link to={Path.MyProfile} className="nav-item nav-link"><FontAwesomeIcon icon={faUser} /> My Profile</Link>
                     )}
                 </div>
-                    <span className={styles.welcome}>Welcome {!isAuthenticated ? 'Guest' : email}</span>
+                    <span className={styles.welcome}>Welcome {!isAuthenticated ? 'Guest' : email.split('@')[0]}</span>
                     {!isAuthenticated && (
                         <div className="guestButtons">
                             <Link to={Path.Register} className={`btn btn-primary rounded-pill py-2 px-4 mx-1 ${styles.btnGradient}`}>Register</Link>

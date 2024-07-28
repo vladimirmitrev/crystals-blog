@@ -12,7 +12,7 @@ import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const UserProfile = () => {
-    const { email, userId, name, phone, username } = useContext(AuthContext);
+    const { email, userId, name, phone } = useContext(AuthContext);
     const { showNotification } = useContext(NotificationContext);
     const [crystals, setCrystals] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -34,7 +34,7 @@ const UserProfile = () => {
             <h6 className="mt-2">My Profile</h6>
             <div className={`team-item ${styles.profileInfo}`}>
                 <p><FontAwesomeIcon icon={faUser} /></p>
-                <p>Name: <span>{name ? name : username}</span></p>
+                <p>Name: <span>{name}</span></p>
                 <p>Email: <span>{email}</span></p>
                 <p>Phone: <span>+359{phone ? phone : 888123456}</span></p>
             </div>

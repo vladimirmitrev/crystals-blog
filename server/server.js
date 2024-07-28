@@ -1321,17 +1321,17 @@
     	users: {
     		"35c62d76-8152-4626-8712-eeb96381bea8": {
     			email: "peter@abv.bg",
-    			username: "Peter",
+    			name: "Peter Petrov",
     			hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1"
     		},
     		"847ec027-f659-4086-8032-5173e2f9c93a": {
     			email: "george@abv.bg",
-    			username: "George",
+    			name: "George Georgiev",
     			hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1"
     		},
     		"60f0cf0b-34b0-4abd-9769-8c42f830dffc": {
     			email: "admin@abv.bg",
-    			username: "Admin",
+    			name: "Admin Adminov",
     			hashedPassword: "fac7060c3e17e6f151f247eacb2cd5ae80b8c36aedb8764e18a41bbdc16aa302"
     		}
     	},
@@ -1387,6 +1387,17 @@
                 imageUrl: "https://cdn11.bigcommerce.com/s-74zp6w28re/images/stencil/1280x1280/products/6163/36906/new-moon-beginnings-raw-lapis-lazuli-stone-a-quality-crr-aa618__51940.1635554640.jpg?c=1",
                 _createdOn: 1721917040956,
                 _id: "27be0627-0703-4dc3-814f-bb09e50e3783"
+    		},
+            "d4189831-b37b-4c6a-89be-0f091029fb01": {
+    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                name: "Citrine",
+                color: "Yellow to yellowish brown",
+                appearance: "Transparent crystals, all sizes, often as geode, point, or cluster",
+                source: "Brazil, Russia, France, Madagascar,  Britain, United States",
+                healing: "Citrine is an excellent stone for energizing and recharging. It is highly beneficial for CFS* and  reverses degenerative disease. Citrine stimulates digestion, the spleen, and the pancreas. It negates infections in the kidney and bladder, helps eye problems, increases blood circulation, detoxifies the blood, activates the thymus, and balances the thyroid it has a warming effect and fortifies the nerves. Citrine is an eliminator-it relieves constipation and removes cellulite. As an elixir, it is  helpful for menstrual problems and menopausal symptoms such as hot flashes, balancing the hormones and alleviating fatigue",
+                imageUrl: "https://media.istockphoto.com/id/538469182/photo/rough-citrine-crystal-on-white.jpg?s=612x612&w=0&k=20&c=ldQHSpgZLKjvfEZx8DhqaLToi4ApZcfYJQQZaDrdRU4=",
+                _createdOn: 1721917040956,
+                _id: "d4189831-b37b-4c6a-89be-0f091029fb01"
     		},
     	},
     	recipes: {
