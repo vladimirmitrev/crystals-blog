@@ -1,0 +1,17 @@
+.aboutUsText {
+    max-width: 60rem;
+    margin-bottom: 2rem;
+}
+
+.aboutUsText p {
+    margin-top: 1rem;
+    color: black
+}
+
+.exploreLink {
+    color: var(--primary);
+    margin-bottom: 2rem;
+}
+.exploreLink:hover {
+    color: var(--secondary);
+}
