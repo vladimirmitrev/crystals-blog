@@ -14,7 +14,7 @@ const Footer = () => {
         <footer className={`container bg-dark text-light footer fixed-bottom container`}>
                 <div className="copyright text-center">
                     <div className='my-2'>
-                        <span> &copy; <Link className="border-bottom" to={Path.Home}>Crystals Blog by Vladimir Mitrev 2024</Link>
+                        <span> &copy; <Link className="border-bottom" to={Path.Home}>Crystal Blog by Vladimir Mitrev 2024</Link>
                         </span>
                     </div>
                     <div className='text-center container my-1'>

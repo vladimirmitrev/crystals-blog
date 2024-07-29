@@ -35,7 +35,7 @@ const Home = ({
         <div className="container">
           <div className="text-center">
             <h1 className="mb-5 text-dark mt-3">
-              Welcome {name ? name : 'Guest'} to Crystals Blog!!!
+              Welcome {name ? name : 'Guest'} to Crystal Blog!!!
             </h1>
             <h6 className="section-title bg-white text-center text-primary px-3">
               Our Latest Crystals
