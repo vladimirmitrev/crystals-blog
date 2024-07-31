@@ -20,6 +20,7 @@ import Loading from './components/loading/Loading';
 import CrystalCatalog from './components/crystals/catalog/CrystalCatalog';
 import UserProfile from './components/userProfile/UserProfile';
 import AboutUs from './components/aboutus/AboutUs';
+import ContactUs from './components/contact/ContactUs';
 // import CrystalDetails from './components/crystals/crystal-details/CrystalDetails';
 const CrystalDetails = lazy(() => import('./components/crystals/crystal-details/CrystalDetails'));
 
@@ -37,6 +38,7 @@ function App() {
           <Route path={Path.Crystals} element={<CrystalCatalog />}/>
           <Route path={Path.CrystalDetails} element={<CrystalDetails />} />
           <Route path={Path.About} element={<AboutUs />} />
+          <Route path={Path.Contact} element={<ContactUs />} />
 
           <Route element={<GuestGuard />}>
             <Route path={Path.Login} element={<Login />} />
