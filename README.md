@@ -1,1 +1,1 @@
-#Crystal Blog Node.js + React Application
+#Crystal Blog React Application
