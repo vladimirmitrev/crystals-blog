@@ -11,7 +11,8 @@
 .exploreLink {
     color: var(--primary);
     margin-bottom: 2rem;
+    font-size: 1.5rem;
 }
 .exploreLink:hover {
-    color: var(--secondary);
+    color: var(--blue-dark);
 }

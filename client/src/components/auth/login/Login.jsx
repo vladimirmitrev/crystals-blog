@@ -6,6 +6,10 @@ import styles from './Login.module.css';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 
+import { faUserLock } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+
 const Login = () => {
   const { loginSubmitHandler } = useContext(AuthContext);
 
@@ -32,7 +36,7 @@ const Login = () => {
         data-wow-delay="2s"
       >
         <form onSubmit={formik.handleSubmit}>
-          <h1>Login</h1>
+          <h1 className='text-center'>Login <FontAwesomeIcon icon={faUserLock}/></h1>
           <div className="row g-3">
             <div className="col-12">
               <div className="form-floating">
@@ -71,7 +75,7 @@ const Login = () => {
               </div>
             </div>
             <div className="col-12">
-              <button className="btn btn-primary w-100 py-3" type="submit">
+              <button className={`btn btn-primary w-100 py-3 ${styles.loginBtn}`} type="submit">
                 Login
               </button>
             </div>

@@ -46,6 +46,10 @@
 .commentText {
     color: grey;
 }
+.addCommentBtn {
+    /* font-size: 1.25rem; */
+    letter-spacing: 2px;
+}
 
 @media (max-width: 768px) {
     .commentLi {

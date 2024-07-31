@@ -2,6 +2,9 @@ import { Link } from 'react-router-dom';
 import Path from '../../paths';
 import styles from './AboutUs.module.css';
 
+import { faGem } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 const AboutUs = () => {
   return (
     <div className="container-xxl py-5 wow" data-wow-delay="0.1s">
@@ -46,7 +49,9 @@ const AboutUs = () => {
                 </p>
                 <p>Warm regards,</p>
                 <p className={styles.lastP}>The Crystal Blog Team</p>
-                <Link to={Path.Crystals} className={styles.exploreLink}>Click here to explore our crystals</Link>
+            </div>
+            <div className='animated fadeInUp'>
+                <Link to={Path.Crystals} className={styles.exploreLink}>Click here to explore our crystals <FontAwesomeIcon icon={faGem} /></Link>
             </div>
         </div>
     </div>

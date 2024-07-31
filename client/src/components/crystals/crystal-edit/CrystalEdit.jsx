@@ -9,6 +9,9 @@ import { NotificationContext, types } from '../../../contexts/NotificationContex
 import { pathToUrl } from '../../../utils/pathUtils';
 import AuthContext from '../../../contexts/authContext';
 
+import { faGem } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 const CrystalEdit = () => {
   const { showNotification } = useContext(NotificationContext);
   const { loggedUserId } = useContext(AuthContext);
@@ -105,7 +108,7 @@ const CrystalEdit = () => {
       data-wow-delay="2s"
     >
       <form onSubmit={formik.handleSubmit}>
-        <h1>Edit Crystal</h1>
+        <h1>Edit Crystal <FontAwesomeIcon icon={faGem}/></h1>
         <div className="row g-3">
           <div className="col-12">
             <div className="form-floating">
@@ -236,9 +239,9 @@ const CrystalEdit = () => {
           </div>
           <div className="col-12 d-flex gap-3 justify-content-around">
             <Link to={pathToUrl(Path.CrystalDetails, { crystalId })} 
-                className="btn details-btn btn-primary rounded-3 col-5">Back to crystal details
+                className="btn details-btn btn-info rounded-3">Back to crystal details
             </Link>
-            <button className="btn btn-warning rounded-3 col-5" type="submit">
+            <button className={`btn btn-primary w-100 py-3 ${styles.editBtn}`} type="submit">
               Edit Crystal
             </button>
           </div>

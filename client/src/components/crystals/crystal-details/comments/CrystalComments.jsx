@@ -41,6 +41,7 @@ const CrystalComments = () => {
         text: Yup.string()
           .min(6, 'Comment should be at least 6 characters')
           .max(256, 'Comment should be no longer than 256 characters')
+          .required('Required')
       
       }),
       onSubmit: async (values) => {
@@ -105,14 +106,14 @@ const CrystalComments = () => {
                     placeholder="Comment"
                     name="text"
                     onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
+                    // onBlur={formik.handleBlur}
                     value={formik.values.text}
                     />
                     <label htmlFor="text">New comment</label>
                     {formik.errors.text ? (
                     <p className={styles.inputError}>{formik.errors.text}</p>
                     ) : null}
-                    <button className="btn btn-primary w-100 py-3 mt-3" type="submit">
+                    <button className={`btn btn-primary w-100 py-3 mt-2 ${styles.addCommentBtn}`} type="submit">
                     Add comment
                     </button>
                 </div>

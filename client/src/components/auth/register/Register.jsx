@@ -6,6 +6,9 @@ import styles from './Register.module.css';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 
+import { faUserCheck } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 const Register = () => {
   const { registerSubmitHandler } = useContext(AuthContext);
   const formik = useFormik({
@@ -42,7 +45,7 @@ const Register = () => {
       data-wow-delay="2s"
     >
       <form onSubmit={formik.handleSubmit}>
-        <h1>Register</h1>
+        <h1 className='text-center'>Register <FontAwesomeIcon icon={faUserCheck}/></h1>
         <div className="row g-3">
           <div className="col-12">
             <div className="form-floating">
@@ -135,7 +138,7 @@ const Register = () => {
             </div>
           </div>
           <div className="col-12">
-            <button className="btn btn-primary w-100 py-3" type="submit">
+            <button className={`btn btn-primary w-100 py-3 ${styles.regBtn}`} type="submit">
               Register
             </button>
           </div>

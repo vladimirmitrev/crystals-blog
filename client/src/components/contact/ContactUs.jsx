@@ -1,4 +1,6 @@
 import styles from './ContactUs.module.css';
+import { faEnvelope, faEnvelopeOpen, faMapMarked, faMapMarkerAlt, faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const ContactUs = () => {
   return (
@@ -9,6 +11,7 @@ const ContactUs = () => {
             <h6 className="section-title bg-white text-center text-primary px-3  mt-3">
               Contact Us
             </h6>
+            <h3 className='mt-3'>Find us on the map <FontAwesomeIcon icon={faMapMarked} /></h3>
           </div>
           <div className="row g-4 mt-3">
             <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -19,9 +22,8 @@ const ContactUs = () => {
               <div className="d-flex align-items-center mb-4">
                 <div
                   className="d-flex align-items-center justify-content-center flex-shrink-0 bg-secondary"
-                  style={{ height: '50px', width: '50px' }}
-                >
-                  <i className="fa fa-map-marker-alt text-white"></i>
+                  style={{ height: '50px', width: '50px' }}>
+                  <FontAwesomeIcon icon={faMapMarkerAlt} inverse/>
                 </div>
                 <div className="ms-3">
                   <h5 className="">Office</h5>
@@ -31,9 +33,8 @@ const ContactUs = () => {
               <div className="d-flex align-items-center mb-4">
                 <div
                   className="d-flex align-items-center justify-content-center flex-shrink-0 bg-secondary"
-                  style={{ height: '50px', width: '50px' }}
-                >
-                  <i className="fa fa-phone-alt text-white"></i>
+                  style={{ height: '50px', width: '50px' }}>
+                  <FontAwesomeIcon icon={faPhoneAlt} inverse/>
                 </div>
                 <div className="ms-3">
                   <h5 className="">Mobile</h5>
@@ -43,9 +44,8 @@ const ContactUs = () => {
               <div className="d-flex align-items-center">
                 <div
                   className="d-flex align-items-center justify-content-center flex-shrink-0 bg-secondary"
-                  style={{ height: '50px', width: '50px' }}
-                >
-                  <i className="fa fa-envelope-open text-white"></i>
+                  style={{ height: '50px', width: '50px' }}>
+                  <FontAwesomeIcon icon={faEnvelope} inverse/>
                 </div>
                 <div className="ms-3">
                   <h5 className="">Email</h5>

@@ -8,6 +8,10 @@ import * as Yup from 'yup';
 import * as crystalService from '../../../services/crystalService';
 import { NotificationContext, types } from '../../../contexts/NotificationContext';
 
+import { faGem } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+
 const CreateCrystal = () => {
   const { showNotification } = useContext(NotificationContext);
   const navigate = useNavigate();
@@ -68,7 +72,7 @@ const CreateCrystal = () => {
       data-wow-delay="2s"
     >
       <form onSubmit={formik.handleSubmit}>
-        <h1>Create Crystal</h1>
+        <h1>Create Crystal <FontAwesomeIcon icon={faGem}/></h1>
         <div className="row g-3">
           <div className="col-12">
             <div className="form-floating">
@@ -198,7 +202,7 @@ const CreateCrystal = () => {
             </div>
           </div>
           <div className="col-12">
-            <button className="btn btn-primary w-100 py-3" type="submit">
+            <button className={`btn btn-primary w-100 py-3 ${styles.createBtn}`} type="submit">
               Create crystal
             </button>
           </div>
