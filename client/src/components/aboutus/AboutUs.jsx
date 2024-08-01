@@ -9,10 +9,10 @@ const AboutUs = () => {
   return (
     <div className="container-xxl py-5 wow" data-wow-delay="0.1s">
       <div className={`container text-center ${styles.aboutUsText}`}>
-            <h3 className="mb-5 text-dark mt-3">
+            {/* <h3 className="mb-5 text-dark mt-3">
                 Welcome to Crystal Blog!!!
-            </h3>
-            <h6 className="section-title bg-white text-center text-primary px-3">
+            </h3> */}
+            <h6 className="section-title bg-white text-center text-primary px-3 mt-3">
                 Our Story
             </h6>
             <p className="animated slideInDown">

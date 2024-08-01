@@ -5,7 +5,8 @@
 
 .aboutUsText p {
     margin-top: 1rem;
-    color: black
+    color: black;
+    line-height: 1.75;
 }
 
 .exploreLink {
