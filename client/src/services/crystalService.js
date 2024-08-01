@@ -68,3 +68,29 @@ export const getByOwnerId = async (_ownerId) => {
         throw error;
     }
 };
+
+export const searchByName = async (name) => {
+    const whereClause = `where=name%20LIKE%20%22${name}%22`;
+
+    try {
+        const result = await request.get(`${BASE_URL}?${whereClause}`);
+
+        return result;
+    } catch (error) {
+        console.error('Error searching by name:', error);
+        throw error;
+    }
+};
+
+export const searchByHealing = async (healing) => {
+    const whereClause = `where=healing%20LIKE%20%22${healing}%22`;
+
+    try {
+        const result = await request.get(`${BASE_URL}?${whereClause}`);
+
+        return result;
+    } catch (error) {
+        console.error('Error searching by healing:', error);
+        throw error;
+    }
+};
