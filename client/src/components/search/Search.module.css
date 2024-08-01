@@ -1,0 +1,11 @@
+.inputError {
+    color: red;
+    margin-top: 0.5rem !important;
+    margin-bottom: 0 !important
+}
+
+@media (max-width: 768px) {
+    .searchForm {
+       flex-direction: column;
+    }
+}
