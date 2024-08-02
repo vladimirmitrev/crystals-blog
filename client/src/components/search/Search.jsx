@@ -63,12 +63,11 @@ const Search = () => {
                 <div className="col-lg-10 pt-lg-4 mt-lg-4 text-center">
                     <h6 className="section-title bg-white text-center text-primary px-3 mt-3">Search</h6>
                     <h2 className="mb-3 mt-3 animated slideInDown">Search for a crystals <FontAwesomeIcon icon={faGem} /> by name or by healing abilities</h2>
-                    {/* <p className="fs-4 mb-4 animated slideInDown">Tempor erat elitr rebum at clita diam amet diam et eos erat ipsum lorem sit</p> */}
-                    <div className="w-75 mx-auto animated slideInDown">
+                    <div className="w-75 mx-auto pt-3 animated slideInDown">
                     <form onSubmit={formik.handleSubmit} className={`d-flex gap-3 ${styles.searchForm}`}>
-                        <div className='d-flex flex-column col-lg-4 pt-lg-2 mt-lg-2'>
+                        <div className='d-flex flex-column col-lg-4'>
                             <input 
-                            className="form-control rounded-pill  py-3 ps-4 pe-5 mb-3 border-3" 
+                            className="form-control rounded-pill border-3" 
                             type="text" 
                             placeholder="Eg: Amethyst"
                             name="name"
@@ -80,9 +79,9 @@ const Search = () => {
                             <p className={styles.inputError}>{formik.errors.name}</p>
                             ) : null}
                         </div>
-                        <div className='d-flex flex-column col-lg-4 pt-lg-2 mt-lg-2'>
+                        <div className='d-flex flex-column col-lg-4'>
                         <input 
-                        className="form-control rounded-pill py-3 ps-4 pe-5 mb-3 border-3" 
+                        className="form-control rounded-pill border-3" 
                         type="text" 
                         placeholder="Eg: headache"
                         name="healing"
@@ -94,8 +93,8 @@ const Search = () => {
                         <p className={styles.inputError}>{formik.errors.healing}</p>
                         ) : null}
                         </div>
-                        <div className='col-lg-2 pt-lg-2 mt-lg-2'>
-                        <button type="submit" className="btn btn-primary rounded-pill ps-4 pe-5 mb-3 border-3 pt-lg-2 mt-lg-2">Search</button>
+                        <div className='col-lg-2'>
+                        <button type="submit" className="btn btn-primary rounded-pill px-5 border-3">Search</button>
                         </div>
                     </form>
                     </div>

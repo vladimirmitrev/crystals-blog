@@ -1,5 +1,5 @@
 import styles from './ContactUs.module.css';
-import { faEnvelope, faEnvelopeOpen, faMapMarked, faMapMarkerAlt, faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faMapMarked, faMapMarkerAlt, faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const ContactUs = () => {
@@ -7,14 +7,14 @@ const ContactUs = () => {
     <>
       <div className="container-xxl py-5">
         <div className="container">
-          <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
+          <div className="text-center wow" data-wow-delay="0.1s">
             <h6 className="section-title bg-white text-center text-primary px-3  mt-3">
               Contact Us
             </h6>
-            <h3 className='mt-3'>Find us on the map <FontAwesomeIcon icon={faMapMarked} /></h3>
+            <h3 className='mt-3 animated fadeInUp'>Find us on the map <FontAwesomeIcon icon={faMapMarked} /></h3>
           </div>
           <div className="row g-4 mt-3">
-            <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+            <div className="col-lg-4 col-md-6 wow animated slideInLeft" data-wow-delay="0.1s">
               <h5>Get In Touch</h5>
               <p className="mb-4">
                 Feel free to get in with contact us
