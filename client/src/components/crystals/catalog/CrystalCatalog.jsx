@@ -85,7 +85,7 @@ const CrystalCatalog = () => {
                     </div>
                 )}
                 {!loading && totalPages > 1 && (
-                    <div className={`pagination ${styles.pagination}`}>
+                    <div className={`pagination animated zoomIn ${styles.pagination}`}>
                         {Array.from({ length: totalPages }, (_, i) => i + 1).map(pageNumber => (
                             <button
                                 key={pageNumber}
