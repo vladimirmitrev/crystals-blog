@@ -17,7 +17,7 @@ import { NotificationContext, types } from '../../../../contexts/NotificationCon
 
 const CrystalComments = () => {
     const { crystalId } = useParams();
-    const { email, userId, isAuthenticated } = useContext(AuthContext);
+    const { email, name, isAuthenticated  } = useContext(AuthContext);
     const [comments, dispatch] = useReducer(reducer, []);
     const { showNotification } = useContext(NotificationContext);
     // const navigate = useNavigate();
@@ -52,7 +52,7 @@ const CrystalComments = () => {
               values.text,
            );
   
-           newComment.owner = { email };
+           newComment.owner = { email, name };
           dispatch({
               type: 'ADD_COMMENT',
               payload: newComment
