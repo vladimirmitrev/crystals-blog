@@ -12,7 +12,17 @@ const LatestsCrystalsItem = ({
     color, 
     appearance,
     rarity,
+    _createdOn
   }) => {
+    const formatDate = (timestamp) => {
+      const date = new Date(timestamp);
+      const formattedDate = date.toLocaleDateString('en-US', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+        });
+      return formattedDate; // Customize this format if needed
+  };
   return (
     <div className={`item testimonial-item bg-white text-center border p-4 team-item ${styles.latestCard}`}>
         <img
@@ -21,7 +31,11 @@ const LatestsCrystalsItem = ({
         />
         <div className="text-center">
             <h5 className="mb-0">{name}</h5>
-            <small><FontAwesomeIcon icon={faGem} /> {rarity}</small>
+            {/* <small><FontAwesomeIcon icon={faGem} /> Color: {color}</small> */}
+            {/* <br /> */}
+            <small><FontAwesomeIcon icon={faGem} /> Rarity: {rarity}</small>
+            <br />
+            <small>{`Uploaded on ${formatDate(_createdOn)}`}</small>
         </div>
         {/* <h5 className="mt-3">{name}</h5>
         <small><FontAwesomeIcon icon={faGem} /> {rarity}</small> */}
