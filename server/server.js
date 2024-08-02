@@ -1320,17 +1320,17 @@
     var protectedData = {
     	users: {
     		"35c62d76-8152-4626-8712-eeb96381bea8": {
-    			email: "peter@abv.bg",
+    			email: "peter@gmail.com",
     			name: "Peter Petrov",
     			hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1"
     		},
     		"847ec027-f659-4086-8032-5173e2f9c93a": {
-    			email: "george@abv.bg",
+    			email: "george@gmail.com",
     			name: "George Georgiev",
     			hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1"
     		},
     		"60f0cf0b-34b0-4abd-9769-8c42f830dffc": {
-    			email: "admin@abv.bg",
+    			email: "admin@gmail.com",
     			name: "Admin Adminov",
     			hashedPassword: "fac7060c3e17e6f151f247eacb2cd5ae80b8c36aedb8764e18a41bbdc16aa302"
     		}
@@ -1348,7 +1348,7 @@
                 rarity: "One of the  most common crystals",
                 source: "United States, Britain, Canada, Brazil, Mexico, Russia, Sri Lanka, Uruguay, East Africa, Siberia, India",
                 healing: "Amethyst boosts production of hormones, and tunes the endocrine system and metabolism. It strengthens the cleansing and eliminating organs and the immune system. An excellent cleanser fo r the blood, Amethyst re l ieves physical, emotional, and  psychological pain or stress, and blocks geopathic stress. It eases headaches and releases tension. This stone red uces bruising, injuries, and swellings, and treats hearing disorders. It heals dis-eases of the lungs and respiratory  tract, skin co nditions, cellular disorders, and dis-eases of the digestive tract. It is beneficial for the intestines, regulating flora, removing parasites, and encouraging reabsorption of water. Amethyst treats insomnia and brings restful  sleep. At a  subtle level, Amethyst balances and connects the physical, mental, and emotional bodies*, linking them to the spiritual. It cleanses the aura* and transmutes negative energy, and stimulates the throat and crown chakras*. It is helpfu l for people about to make the transition through death. Amethyst can stabilize psychiatric conditions but should not be used in cases of paranoia or schizophrenia.",
-                imageUrl: "https://www.mindat.org/imagecache/95/6d/04297530017099816759006.jpg",
+                imageUrl: "https://i.pinimg.com/originals/70/f5/35/70f535d87c5588a0b55d64a86bcdc279.jpg",
                 _createdOn: 1721667302811,
                 _id: "cbb585ae-e630-42b7-84a3-6c092a62842a"
     		},
@@ -1360,21 +1360,9 @@
                 rarity: "Readily available",
                 source: "Italy, Brazil, China, India, Russia, Tibet. Nepal",
                 healing: "Aventurine benefits the thymus gland, connective tissue, and nervous system; it balances blood pressure  and stimulates the metabolism, lowering cholesterol and  preventing arteriosclerosis and heart attacks. It has an anti-inflammatory effect and helps ease skin eruptions and  allergies, relieves migraine headaches, and soothes the eyes. Aventurine heals the adrenals, lungs, sinuses, heart and muscular and urogenital systems. As an elixir, it relieves skin problems.",
-                imageUrl: "https://ancient-infusions.com/cdn/shop/articles/green-aventurine-crystal-benefits-luck-abundance-heart-healing-emotional-balance.png",
+                imageUrl: "https://media.istockphoto.com/id/516493526/photo/tumbled-green-aventurine-mineral-gemstone.jpg?s=612x612&w=0&k=20&c=PT04hhakNJW91wEfHRvctW3W7kbmLWf1q172VOeRJzA=",
                 _createdOn: 1721669429347,
                 _id: "05682dfb-bfc2-4fbb-9785-958dc8453d65"
-    		},
-            "334aad36-39d6-41fb-84de-ced140762d82": {
-    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-                name: "Agate",
-                color: "Clear or milky white, gray, blue, green, pink, brown, often artificially colored",
-                appearance: "Waxy and soft, usually banded, sometimes translucent with small crystals, va rious sizes. Often sold as artificially colored slices that have no additional therapeutic properties",
-                rarity: "Common",
-                source: "United States, India, Morocco, Czech Republic, Brazil, Africa",
-                healing: "Agate stabilizes the aura*, eliminating and transforming negative energies",
-                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpQy0JwUoA_v-vMniJWFdIXm84PqsltyvEag&s",
-                _createdOn: 1721670361880,
-                _id: "334aad36-39d6-41fb-84de-ced140762d82"
     		},
             "27be0627-0703-4dc3-814f-bb09e50e3783": {
     			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
@@ -1384,7 +1372,7 @@
                 rarity: "Easily obtained but expensive",
                 source: "Russia, Afghanistan, Chile, Italy, United States, Egypt Middle East",
                 healing: "La pis Lazuli alleviates pain, especially that of migraine headaches. It overcomes depression, benefits the respiratory and nervous systems and the throat, larynx, and thyroid, cleanses organs, bone marrow, thymus, and the immune system. La pis Lazuli overcomes hearing loss, purifies blood, and boosts the immune system. It alleviates insomnia a J vertigo, and  lowers blood pressure",
-                imageUrl: "https://cdn11.bigcommerce.com/s-74zp6w28re/images/stencil/1280x1280/products/6163/36906/new-moon-beginnings-raw-lapis-lazuli-stone-a-quality-crr-aa618__51940.1635554640.jpg?c=1",
+                imageUrl: "https://media.istockphoto.com/id/522078301/photo/precious-gem-on-white-background-lapis-lazuli.jpg?s=612x612&w=0&k=20&c=1EywC1O3O5-6PWEKxDInDwElsfsihTyS_hX_VlPoZLE=",
                 _createdOn: 1721917040956,
                 _id: "27be0627-0703-4dc3-814f-bb09e50e3783"
     		},
@@ -1393,11 +1381,120 @@
                 name: "Citrine",
                 color: "Yellow to yellowish brown",
                 appearance: "Transparent crystals, all sizes, often as geode, point, or cluster",
+                rarity: "Natural Citrine is comparatively rare; heat-treated Amethyst is often sold as Citrine",
                 source: "Brazil, Russia, France, Madagascar,  Britain, United States",
                 healing: "Citrine is an excellent stone for energizing and recharging. It is highly beneficial for CFS* and  reverses degenerative disease. Citrine stimulates digestion, the spleen, and the pancreas. It negates infections in the kidney and bladder, helps eye problems, increases blood circulation, detoxifies the blood, activates the thymus, and balances the thyroid it has a warming effect and fortifies the nerves. Citrine is an eliminator-it relieves constipation and removes cellulite. As an elixir, it is  helpful for menstrual problems and menopausal symptoms such as hot flashes, balancing the hormones and alleviating fatigue",
                 imageUrl: "https://media.istockphoto.com/id/538469182/photo/rough-citrine-crystal-on-white.jpg?s=612x612&w=0&k=20&c=ldQHSpgZLKjvfEZx8DhqaLToi4ApZcfYJQQZaDrdRU4=",
-                _createdOn: 1721917040956,
+                _createdOn: 1721917040958,
                 _id: "d4189831-b37b-4c6a-89be-0f091029fb01"
+    		},
+            "334aad36-39d6-41fb-84de-ced140762d82": {
+    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                name: "Agate",
+                color: "Clear or milky white, gray, blue, green, pink, brown, often artificially colored",
+                appearance: "Waxy and soft, usually banded, sometimes translucent with small crystals, va rious sizes. Often sold as artificially colored slices that have no additional therapeutic properties",
+                rarity: "Common",
+                source: "United States, India, Morocco, Czech Republic, Brazil, Africa",
+                healing: "Agate stabilizes the aura*, eliminating and transforming negative energies",
+                imageUrl: "https://cdn.shopify.com/s/files/1/0273/4214/3566/files/Untitled_design_-_2020-08-30T132935.679.jpg?v=1598790602",
+                _createdOn: 1721670361880,
+                _id: "334aad36-39d6-41fb-84de-ced140762d82"
+    		},
+            "d4189831-b37b-4c6a-89be-0f091029fb09": {
+    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                name: "Tourmaline",
+                color: "Black, brown, green, pink, red, yellow, blue, watermelon, blue-green",
+                appearance: "Shiny, opaque, or transparent. long striated or hexagonal structure. All sizes",
+                rarity: "Easily obtained from specialist stores",
+                source: "Sri Lanka, Brazil, Africa, United States, Western Australia, Afghanistan, Italy",
+                healing: "The striations along the side of Tourmaline enhance energy flow, making it an excellent stone for healing, energy enhancement, and re m ova I of blockages. Each of the different colors of Tourmaline has its own specific healing ability.",
+                imageUrl: "https://thejewelerblog.wordpress.com/wp-content/uploads/2023/10/iridistourmaline1.jpg?w=575",
+                _createdOn: 1723917040959,
+                _id: "d4189831-b37b-4c6a-89be-0f091029fb09"
+    		},
+            "d4189831-b37b-4c6a-89be-0f091029dn11": {
+    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                name: "Moonstone",
+                color: "White, cream, yellow,  blue, green",
+                appearance: "Milky, translucent, all sizes",
+                rarity: "Easily obtained",
+                source: "India, Sri Lanka, Australia",
+                healing: "Moonstone helps the digestive and  reproductive systems, assimilates nutrients, eliminates toxins and fluid retention, and alleviates degenerative conditions of skin, hair, eyes, and fleshy organs such as the liver and pancreas. It is excellent for PMS, conception, pregnancy, childbirth, and breast-feeding. A Moonstone elixir was traditionally used for insomnia and the stone can  prevent sleepwalking.",
+                imageUrl: "https://media.istockphoto.com/id/508038386/photo/cabochon-from-moonstone-natural-mineral-gem-stone.jpg?s=612x612&w=0&k=20&c=kGH4pHKqF9OoylJm5rKA5cKo61_zOI2U7HQacKRgs60=",
+                _createdOn: 1721920040999,
+                _id: "d4189831-b37b-4c6a-89be-0f091029dn11"
+    		},
+            "d4189831-b37b-4c6a-89be-0f091029eg22": {
+    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                name: "Turquoise",
+                color: "Turquoise, green or blue",
+                appearance: "Opaque, often veined, all sizes often polished",
+                rarity: "Easily obtained",
+                source: "United States, Egypt, Mexico, China, Iran, Pe ru, Poland, Russia, France, Tibet, Egypt. Afghanistan, Arabia",
+                healing: "Turquoise strengthens the meridians of the body and the subtle energy fields. It enhances the physical and psychic immune systems and  regenerates tissue, supports the assimilation of nutrients, alleviates pollution and vi ral infections, and heals the whole body, especially the eyes, including cataracts. It  reduces excess acidity and  benefits gout rheumatism, and the stomach. This stone is anti­inflammatory and detoxifying and alleviates cramps and pain.",
+                imageUrl: "https://png.pngtree.com/thumb_back/fw800/background/20240620/pngtree-rough-turquoise-stone-isolated-on-white-image_15800397.jpg",
+                _createdOn: 1721960041872,
+                _id: "d4189831-b37b-4c6a-89be-0f091029eg22"
+    		},
+            "d4189831-b37b-4c6a-89be-0f091033jh33": {
+    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                name: "Rose Quartz",
+                color: "Pink",
+                appearance: "Usually translucent, may be transparent, all sizes, sometimes tumbled",
+                rarity: "Easily obtained",
+                source: "South Africa. United States, Brazil, Japan, India, Madagascar",
+                healing: "Rose Quartz strengthens the physical heart and circulatory system and releases impurities from body fluids. Placed on the thymus, Rose Quartz aids chest and lung problems. It heals the kidneys and adrenals and alleviates vertigo. Rose Quartz is said  to increase fertility. The stone or elixir soothes burns and blistering and smooths the complexion.lt is helpful in Alzheimer's, Parkinson's, and senile dementia.",
+                imageUrl: "https://media.istockphoto.com/id/1129167479/photo/rose-quartz-raw-rough-and-natural-still-not-grinding-shape-pink-stone.jpg?s=612x612&w=0&k=20&c=vb7FxjDywE_1q_zwN1rbt3HpVTCI3E177Lto41vJpvU=",
+                _createdOn: 1722970041872,
+                _id: "d4189831-b37b-4c6a-89be-0f091033jh33"
+    		},
+            "d4189831-b37b-4c6a-89be-0f091033vv44": {
+    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                name: "Amber",
+                color: "Golden brown or yellow-green is artificially colored",
+                appearance: "Opaque or transparent resin, insects or vegetation trapped inside, various sizes",
+                rarity: "Easily obtained",
+                source: "Britain, Poland, Italy, Romania, Russia, Germany, Myanmar, Dominica",
+                healing: "Amber is a  powerful chakra cleanser and healer. At a physical level, it imbues the body with vitality and has the power to draw dis­ease out of the body. By absorbing pain and  negative energy, Amber allows the body to re-balance and heal itself. Amber alleviates stress. It resonates with the throat, treating goiters and ot her throat problems. It treats the stomach, spleen, kidneys, bladder, liver, and gallbladder, alleviates joint problems, and strengthens the mucus membranes. As an elixir and fo r wound healing, it is an excellent natural antibiotic. It can stimulate the navel chakra and help in grounding energies into the body",
+                imageUrl: "https://www.shutterstock.com/image-photo/closeup-sample-natural-mineral-geological-600nw-1628904964.jpg",
+                _createdOn: 1723920042272,
+                _id: "d4189831-b37b-4c6a-89be-0f091033vv44"
+    		},
+            "d4189831-b37b-4c6a-89be-0f091077vm77": {
+    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                name: "Diamond",
+                color: "Clear white, yellow, blue, brown, pink",
+                appearance: "Small, clear, transparent gemstone when cut and polished",
+                rarity: "Expensive",
+                source: "Africa, Australia, Brazil, India, Russia, United States",
+                healing: "Diamond treats glaucoma, clears sight. and benefits the brain. It treats allergies and chronic conditions and re-balances the metabolism. Traditionally, it was used to counteract poisons.",
+                imageUrl: "https://www.shutterstock.com/image-photo/dazzling-diamond-on-white-background-600nw-1216122388.jpg",
+                _createdOn: 1722960043372,
+                _id: "d4189831-b37b-4c6a-89be-0f091077vm77"
+    		},
+            "d4189831-b37b-4c6a-89be-0f091033vm22": {
+    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                name: "Emerald",
+                color: "Green",
+                appearance: "Small bright gemstone or larger cloudy crystal",
+                rarity: "Gem quality  is expensive  but unpolished emerald readily available",
+                source: "India, Zimbabwe, Ta nza nia, Brazil, Egypt, Austria",
+                healing: "Emerald aids recovery after infectious illness. It treats sinuses, lungs, heart  spine, and  muscles, and soothes the eyes. It improves vision and has a  detoxifying effect on the liver. Emerald alleviates rheumatism and diabetes. It has been used as an antidote to poisons. Worn around the neck, Emerald was believed to ward off epilepsy. Its green ray can assist healing of malignant conditions.",
+                imageUrl: "https://img.freepik.com/premium-photo/emerald-isolated-white-background_9493-18745.jpg",
+                _createdOn: 1723670043372,
+                _id: "d4189831-b37b-4c6a-89be-0f091033vm22"
+    		},
+            "d4189831-b37b-4c6a-89be-0f091011ll55": {
+    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                name: "Labradorite",
+                color: "Grayish to black with blue, yellow",
+                appearance: "All sizes, usually polished: dark until catches light, then iridescent blue or gold flashes. Yellow fo rm is transparent, usually small and tumbled",
+                rarity: "Readily available",
+                source: "Italy, Greenland, Finland, Russia, Canada, Scandinavia ",
+                healing: "Labradorite treats disorders of the eyes and brain, relieves stress, and regulates metabolism. It treats colds, gout, and rheumatism, balances hormones and relieves menstrual tension, and lowers blood pressure. Labradorite can  be used as a witness during radionic treatment, pinpointing the cause of the dis-ease.",
+                imageUrl: "https://media.istockphoto.com/id/170596395/photo/blue-labradorite.jpg?s=612x612&w=0&k=20&c=IJ3A27FJa89Sa5Rg5Vj9hyEmZ2QpMcIxf7SAfVMepXs=",
+                _createdOn: 1723990055372,
+                _id: "d4189831-b37b-4c6a-89be-0f091011ll55"
     		},
     	},
     	recipes: {
