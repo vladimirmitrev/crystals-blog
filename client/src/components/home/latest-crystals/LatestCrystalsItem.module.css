@@ -1,8 +1,10 @@
 .latestCard {
-    margin: 1rem auto;
+    margin: 0 auto;
 }
 
 .latestCardImage {
-    max-width: 8rem;
-    max-height: 4rem;
+    width: 10rem;
+    height: 10rem;
+    max-width: 10rem;
+    max-height: 10rem;
 }

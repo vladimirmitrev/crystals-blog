@@ -16,7 +16,7 @@ const LatestsCrystalsItem = ({
   return (
     <div className={`item testimonial-item bg-white text-center border p-4 team-item ${styles.latestCard}`}>
         <img
-        className={`bg-white rounded-circle shadow p-1 mx-auto mb-3 ${styles.latestCardImage}`}
+        className={`bg-white rounded-circle p-1 mx-auto mb-3 ${styles.latestCardImage}`}
         src={imageUrl}
         />
         <div className="text-center">

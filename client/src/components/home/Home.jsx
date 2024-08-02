@@ -1,36 +1,70 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+
 import withAuth from '../../HOC/withAuth';
 import * as crystalService from '../../services/crystalService';
 import LatestsCrystalsItem from './latest-crystals/latestCrystalsItem';
+import styles from '../../components/home/Home.module.css'
 
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.min.css';
 import 'owl.carousel/dist/assets/owl.theme.default.min.css';
+
 import Loading from '../loading/Loading';
+import Path from '../../paths';
+
+import { faGem } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Home = ({ 
     email, 
     name }) => {
-  const [latestCrystals, setLatestCrystals] = useState([]);
-  const [loading, setLoading] = useState(true);
+    const [latestCrystals, setLatestCrystals] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [carouselItems, setCarouselItems] = useState(3);
 
-  useEffect(() => {
-    const fetchLatestCrystals = async () => {
-      try {
-        const result = await crystalService.getLatest();
-        setLatestCrystals(result);
-      } catch (error) {
-        console.error('Error fetching latest crystals:', error);
-      } finally {
-        setLoading(false);
-      }
+    const determineItems = () => {
+        const width = window.innerWidth;
+
+        if (width < 600) {
+        return 1;
+        } else if (width < 1024) {
+        return 2;
+        } else {
+        return 3; 
+        }
     };
 
-    fetchLatestCrystals();
-  }, []);
+    useEffect(() => {
+        const fetchLatestCrystals = async () => {
+        try {
+            const result = await crystalService.getLatest();
+            setLatestCrystals(result);
+        } catch (error) {
+            console.error('Error fetching latest crystals:', error);
+        } finally {
+            setLoading(false);
+        }
+        };
+
+        fetchLatestCrystals();
+    }, []);
+
+    useEffect(() => {
+        setCarouselItems(determineItems());
+
+        const handleResize = () => {
+            setCarouselItems(determineItems());
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
 
   return (
-    <div>
       <div className="container-xxl py-5 wow" data-wow-delay="0.1s">
         <div className="container">
           <div className="text-center">
@@ -51,7 +85,7 @@ const Home = ({
           ) : latestCrystals.length ? (
             <OwlCarousel
               className="owl-theme slideInRight animated"
-              items={3}
+              items={carouselItems}
               autoplay={true}
               smartSpeed={1000}
               autoplaySpeed={1000}
@@ -76,8 +110,10 @@ const Home = ({
             </div>
           )}
         </div>
+            <div className='animated fadeInUp text-center'>
+                <Link to={Path.Crystals} className={styles.exploreLink}>Click here to explore our crystals <FontAwesomeIcon icon={faGem} /></Link>
+            </div>
       </div>
-    </div>
   );
 };
 
