@@ -8,7 +8,7 @@ const CrystalCatalog = () => {
     const [allCrystals, setAllCrystals] = useState([]);
     const [loading, setLoading] = useState(true);
     const [currentPage, setCurrentPage] = useState(1);
-    const pageSize = 8;
+    const [pageSize, setPageSize] = useState(8); // Default page size
 
     useEffect(() => {
         const fetchAllCrystals = async () => {
@@ -26,14 +26,38 @@ const CrystalCatalog = () => {
         fetchAllCrystals();
     }, []);
 
-    // Calculate the crystals to display based on the current page
+    const determinePageSize = () => {
+        const width = window.innerWidth;
+
+        if (width < 600) {
+            return 4;
+        } else if (width < 1024) {
+            return 6;
+        } else {
+            return 8;
+        }
+    };
+
+    useEffect(() => {
+        const handleResize = () => {
+            setPageSize(determinePageSize());
+        };
+
+        setPageSize(determinePageSize());
+
+        window.addEventListener("resize", handleResize);
+
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
+
     const indexOfLastCrystal = currentPage * pageSize;
     const indexOfFirstCrystal = indexOfLastCrystal - pageSize;
     const currentCrystals = allCrystals.slice(indexOfFirstCrystal, indexOfLastCrystal);
 
     const totalPages = Math.ceil(allCrystals.length / pageSize);
 
-    // Function to change the page
     const handlePageChange = (pageNumber) => {
         setCurrentPage(pageNumber);
     };
