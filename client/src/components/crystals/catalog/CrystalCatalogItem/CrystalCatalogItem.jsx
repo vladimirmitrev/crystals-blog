@@ -26,7 +26,7 @@ const CrystalCatalogItem = ({
                     <small><FontAwesomeIcon icon={faGem} /> {rarity}</small>
                 </div>
                 <Link to={pathToUrl(Path.CrystalDetails, {crystalId: _id})} 
-                    className="btn details-btn btn-primary rounded-3 mt-2 mb-3">More details
+                    className="btn details-btn btn-primary rounded-5 mt-2 mb-3">More details
                 </Link>
             </div>
         </div>

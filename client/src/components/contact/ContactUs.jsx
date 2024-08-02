@@ -14,7 +14,7 @@ const ContactUs = () => {
             <h3 className='mt-3 animated fadeInUp'>Find us on the map <FontAwesomeIcon icon={faMapMarked} /></h3>
           </div>
           <div className="row g-4 mt-3">
-            <div className="col-lg-4 col-md-6 wow animated slideInLeft" data-wow-delay="0.1s">
+            <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
               <h5>Get In Touch</h5>
               <p className="mb-4">
                 Feel free to get in with contact us

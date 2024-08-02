@@ -28,7 +28,7 @@ const LatestsCrystalsItem = ({
         {/* <p><FontAwesomeIcon icon={faPalette} /> {color}</p>
         <p className="mb-0">{appearance}</p> */}
         <Link to={pathToUrl(Path.CrystalDetails, {crystalId: _id})} 
-            className="btn details-btn btn-primary rounded-3 mt-3">More details
+            className="btn details-btn btn-primary rounded-5 mt-3">More details
         </Link>
     </div>
   );
