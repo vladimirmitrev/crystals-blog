@@ -71,7 +71,7 @@ const Search = () => {
     return (
             <div className="container-fluid row justify-content-center">
                 <div className="col-lg-10 pt-lg-4 mt-lg-4 text-center">
-                    <h6 className="section-title bg-white text-center text-primary px-3 mt-3">Search</h6>
+                    <h6 className="section-title bg-white text-center text-primary px-3 mt-4">Search</h6>
                     <h2 className="mb-3 mt-3 animated slideInDown">Search for a crystals <FontAwesomeIcon icon={faGem} /> by name or by healing abilities</h2>
                     <div className="w-75 mx-auto pt-3 animated slideInDown">
                         <form onSubmit={formik.handleSubmit} className={`d-flex gap-3 ${styles.searchForm}`}>

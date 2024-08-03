@@ -12,7 +12,7 @@ const AboutUs = () => {
             {/* <h3 className="mb-5 text-dark mt-3">
                 Welcome to Crystal Blog!!!
             </h3> */}
-            <h6 className="section-title bg-white text-center text-primary px-3 mt-3">
+            <h6 className="section-title bg-white text-center text-primary px-3 mt-4">
                 Our Story
             </h6>
             <p className="animated slideInDown">

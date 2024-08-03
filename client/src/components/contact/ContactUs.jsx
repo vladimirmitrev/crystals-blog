@@ -8,7 +8,7 @@ const ContactUs = () => {
       <div className="container-xxl py-5">
         <div className="container">
           <div className="text-center wow" data-wow-delay="0.1s">
-            <h6 className="section-title bg-white text-center text-primary px-3  mt-3">
+            <h6 className="section-title bg-white text-center text-primary px-3  mt-4">
               Contact Us
             </h6>
             <h3 className='mt-3 animated fadeInUp'>Find us on the map <FontAwesomeIcon icon={faMapMarked} /></h3>
