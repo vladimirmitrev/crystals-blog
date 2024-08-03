@@ -18,7 +18,7 @@ export const getAll = async (crystalId) => {
 export const getLikeId = async (crystalId, _ownerId) => {
     // Construct the where clause without spaces
     const whereClause = `where=crystalId%3D%22${crystalId}%22%20AND%20_ownerId%3D%22${_ownerId}%22%20AND%20isLiked%3Dtrue`;
-    
+    // const whereClause = `where=crystalId%3D%22${crystalId}%22%20AND%20_ownerId%3D%22${_ownerId}%22%20AND%20isLiked%20IN%20(true,false)`;    
     try {
         // Make the GET request with the properly encoded query string
         const result = await request.get(`${BASE_URL}?${whereClause}`);

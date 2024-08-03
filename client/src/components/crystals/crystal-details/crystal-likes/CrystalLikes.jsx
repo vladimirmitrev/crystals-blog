@@ -28,7 +28,6 @@ const CrystalLikes = ({
                 getCurrentUserLike();
                 setLikesCount(result.length);
                 checkStatusOfLikes();
-                isLikedBefore();
                 console.log(result);
                 console.log(likesCount);
             });
