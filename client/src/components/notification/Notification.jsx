@@ -9,7 +9,7 @@ const Notification = () => {
     console.log(notification.message)
 
     return (
-        <div className={`notification ${notification.type}`} onClick={ hideNotification }>
+        <div className={`${styles.notification} ${styles[notification.type]}`} onClick={ hideNotification }>
             <p className={styles.notificationMessage}>
                 
                 { notification.message }
