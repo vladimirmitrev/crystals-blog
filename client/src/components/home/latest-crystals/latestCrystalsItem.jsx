@@ -21,7 +21,7 @@ const LatestsCrystalsItem = ({
           month: 'long',
           day: 'numeric',
         });
-      return formattedDate; // Customize this format if needed
+      return formattedDate;
   };
   return (
     <div className={`item testimonial-item bg-white text-center border p-4 team-item ${styles.latestCard}`}>
@@ -33,7 +33,7 @@ const LatestsCrystalsItem = ({
             <h5 className="mb-0">{name}</h5>
             {/* <small><FontAwesomeIcon icon={faGem} /> Color: {color}</small> */}
             {/* <br /> */}
-            <small><FontAwesomeIcon icon={faGem} /> Rarity: {rarity}</small>
+            <small><FontAwesomeIcon icon={faGem} /> Rarity: {rarity.length > 32 ? `${rarity.slice(0, 32)}...` : rarity}</small>
             <br />
             <small>{`Uploaded on ${formatDate(_createdOn)}`}</small>
         </div>

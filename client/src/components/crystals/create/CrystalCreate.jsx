@@ -27,15 +27,15 @@ const CreateCrystal = () => {
     },
     validationSchema: Yup.object({
       name: Yup.string()
-        .min(6, 'Name should be at least 6 characters')
+        .min(3, 'Name should be at least 3 characters')
         .max(30, 'Name should be no longer than 30 characters')
         .required('Name is required'),
       color: Yup.string()
         .min(3, 'Color should be at least 3 characters')
-        .max(30, 'Color should be no longer than 30 characters')
+        .max(64, 'Color should be no longer than 64 characters')
         .required('Color is required'),
         appearance: Yup.string()
-        .min(6, 'Appearance should be at least 6 characters')
+        .min(4, 'Appearance should be at least 4 characters')
         .max(256, 'Appearance should be no longer than 256 characters')
         .required('Appearance is required'),
         rarity: Yup.string()
