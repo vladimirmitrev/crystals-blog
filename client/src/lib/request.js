@@ -32,6 +32,16 @@ const request = async (method, url, data) => {
         return {};
     }
 
+    if (response.status === 409) {
+
+        throw new Error('User email already taken!');
+    }
+
+    if (response.status === 403) {
+
+        throw new Error('Wrong user or password!');
+    }
+
     const result = response.json();
 
     if (!response.ok) {

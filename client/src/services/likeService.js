@@ -33,8 +33,8 @@ export const getLikeId = async (crystalId, _ownerId) => {
             throw new Error('No matching object found');
         }
     } catch (error) {
-        console.error('Error fetching like:', error);
-        throw error;
+        // console.error('Error fetching like:', error);
+        // throw error;
     }
 };
 

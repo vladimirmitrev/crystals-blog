@@ -21,16 +21,20 @@ export const AuthProvider = ({
     try {
       const result = await authService.login(values.email, values.password);
 
-      setAuth(result);
-  
-      localStorage.setItem('accessToken', result.accessToken);
-      showNotification('You logged in successfully!', types.success);
+    if (!result || !result.accessToken) {
+        throw new Error('Wrong email or password!');
+    }
+
+        setAuth(result);
+        localStorage.setItem('accessToken', result.accessToken);
+        showNotification('You logged in successfully!', types.success);
   
       navigate(Path.Home);
     } catch(err) {
-      setAuth({});
-      localStorage.removeItem('accessToken');
-      showNotification(err.message, types.error);
+        setAuth({});
+        localStorage.removeItem('accessToken');
+        const errorMessage = err instanceof Error ? err.message : 'Login error';
+        showNotification(errorMessage, types.error);
     }
      
   };
@@ -41,12 +45,12 @@ export const AuthProvider = ({
             setAuth(result);
 
             localStorage.setItem('accessToken', result.accessToken);
-            showNotification('You signed up successfully!', types.success);
+            showNotification('You register successfully!', types.success);
             navigate(Path.Home);
         } catch (err) {
           setAuth({})
           localStorage.removeItem('accessToken');
-        showNotification(err.message, types.error);
+          showNotification(err.message, types.error);
         }
   };
 
