@@ -42,6 +42,11 @@ const request = async (method, url, data) => {
         throw new Error('Wrong user or password!');
     }
 
+    if (response.status === 404) {
+
+        throw new Error('Crystal not found!');
+    }
+
     const result = response.json();
 
     if (!response.ok) {

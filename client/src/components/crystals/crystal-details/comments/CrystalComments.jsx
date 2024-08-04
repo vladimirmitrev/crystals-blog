@@ -59,7 +59,6 @@ const CrystalComments = () => {
           })
           values.text = '';
               showNotification('You successfully added a new comment!', types.success);
-              // navigate(pathToUrl(Path.CrystalDetails, { crystalId }));
           } catch (err) {
               showNotification(err.message, types.error);
               console.log(err);
@@ -75,7 +74,7 @@ const CrystalComments = () => {
             hour: '2-digit',
             minute: '2-digit',
           });
-        return formattedDate; // Customize this format if needed
+        return formattedDate;
     };
 
   return (

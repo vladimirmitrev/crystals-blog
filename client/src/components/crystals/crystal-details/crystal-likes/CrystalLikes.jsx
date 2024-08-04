@@ -27,9 +27,6 @@ const CrystalLikes = ({
                 });
                 getCurrentUserLike();
                 setLikesCount(result.length);
-                checkStatusOfLikes();
-                console.log(result);
-                console.log(likesCount);
             });
     }, [crystalId]);
 
@@ -38,29 +35,31 @@ const CrystalLikes = ({
             const likeId = await likeService.getLikeId(crystalId, userId);
             setLike(likeId);
         } catch (error) {
-            console.error('Error fetching like ID:', error);
+            console.log(error.message);
         }
     };
 
-    const checkStatusOfLikes = async () => {
-        try {
-            const result = await likeService.getStatusOfPreviouslyLiked(_id, crystalId, userId);
+    // const checkStatusOfLikes = async () => {
+    //     try {
+    //         const result = await likeService.getStatusOfPreviouslyLiked(_id, crystalId, userId);
 
-            setIsLikedBefore(result);
+    //         setIsLikedBefore(result);
                             
-        } catch (error) {
-            console.log(error);
-        }
-    };
+    //     } catch (error) {
+    //         showNotification(error.message, types.error);
+    //         // console.log(error);
+    //     }
+    // };
 
     const likeCrystal = async () => {
         const isLiked = true;
         let newLike;
+        console.log(`Current like is ${like}`);
         try {
-            if ( isLikedBefore === false) {
-                newLike = await likeService.like(crystalId, isLiked);
-            } else {
+            if ( like?.isLiked === false) {
                 newLike = await likeService.editPreviouslyLiked(crystalId, isLiked);
+            } else {
+                newLike = await likeService.like(crystalId, isLiked);                
             }
             showNotification('You successfully added a new like!', types.success);
             setLike(newLike);
@@ -77,7 +76,7 @@ const CrystalLikes = ({
 
     const dislikeCrystal = async () => {
         if (!like) {
-            console.error('No like to dislike');
+            // console.log('No like to dislike');
             return;
         }
         const likeId = like._id;
@@ -105,7 +104,6 @@ const CrystalLikes = ({
         <>
             {isAuthenticated && (
                 <div className={styles.likesCard}>
-                    {/* <p className="card-owner"><span>Added by: Someone</span></p> */}
                     <div className="text-center">
                         <div>
                             <h6 className={styles.likesCount}>Likes: ({likesCount ? likesCount : '0'})</h6>
