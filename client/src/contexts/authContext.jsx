@@ -45,7 +45,7 @@ export const AuthProvider = ({
             setAuth(result);
 
             localStorage.setItem('accessToken', result.accessToken);
-            showNotification('You register successfully!', types.success);
+            showNotification('Your registration was successful!', types.success);
             navigate(Path.Home);
         } catch (err) {
           setAuth({})

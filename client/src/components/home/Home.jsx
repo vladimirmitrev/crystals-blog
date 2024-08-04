@@ -111,7 +111,7 @@ const Home = ({
           )}
         </div>
             <div className='animated fadeInUp text-center'>
-                <Link to={Path.Crystals} className={styles.exploreLink}>Click here to explore our crystals <FontAwesomeIcon icon={faGem} /></Link>
+                <Link to={Path.Crystals} className={styles.exploreLink}>Click Here To Explore Our Crystals <FontAwesomeIcon icon={faGem} /></Link>
             </div>
       </div>
   );

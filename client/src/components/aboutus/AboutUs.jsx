@@ -51,7 +51,7 @@ const AboutUs = () => {
                 <p className={styles.lastP}>The Crystal Blog Team</p>
             </div>
             <div className='animated fadeInUp'>
-                <Link to={Path.Crystals} className={styles.exploreLink}>Click here to explore our crystals <FontAwesomeIcon icon={faGem} /></Link>
+                <Link to={Path.Crystals} className={styles.exploreLink}>Click Here To Explore Our Crystals <FontAwesomeIcon icon={faGem} /></Link>
             </div>
         </div>
     </div>

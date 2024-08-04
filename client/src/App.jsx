@@ -22,6 +22,7 @@ import UserProfile from './components/userProfile/UserProfile';
 import AboutUs from './components/aboutus/AboutUs';
 import ContactUs from './components/contact/ContactUs';
 import Search from './components/search/Search';
+import PageNotFound from './components/pageNotFound/PageNotFound';
 // import CrystalDetails from './components/crystals/crystal-details/CrystalDetails';
 const CrystalDetails = lazy(() => import('./components/crystals/crystal-details/CrystalDetails'));
 
@@ -52,6 +53,7 @@ function App() {
             <Route path={Path.CrystalEdit} element={<CrystalEdit />} />
             <Route path={Path.MyProfile} element={<UserProfile />} />
           </Route>
+            <Route path="*" element={<PageNotFound />} />
         </Routes>
         </Suspense>
         <Footer />
