@@ -5,14 +5,24 @@ const BASE_URL = 'http://localhost:3030/data/crystals'
 
 
 export const getAll = async () => {
-    const result = await request.get(BASE_URL);
+
+    // const result = await request.get(`${BASE_URL}`);
+    const result = await request.get(`${BASE_URL}?sortBy=name`);
 
     // return Object.values(result);
     return result;
 }
 
 export const getOne = async (crystalId) => {
-    const result = await request.get(`${BASE_URL}/${crystalId}`)
+    // const result = await request.get(`${BASE_URL}/${crystalId}`)
+    const query = new URLSearchParams({
+        load: `owner=_ownerId:users`
+    });
+    
+    const result = await request.get(`${BASE_URL}/${crystalId}?${query}`);
+
+    console.log(result);
+
     
     return result;
 }
