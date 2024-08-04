@@ -239,9 +239,9 @@ const CrystalEdit = () => {
           </div>
           <div className="col-12 d-flex gap-3 justify-content-around">
             <Link to={pathToUrl(Path.CrystalDetails, { crystalId })} 
-                className="btn details-btn btn-info rounded-3">Back to crystal details
+                className="btn details-btn btn-info rounded-pill">Back to crystal details
             </Link>
-            <button className={`btn btn-primary w-100 py-3 ${styles.editBtn}`} type="submit">
+            <button className={`btn btn-warning w-100 py-3 ${styles.editBtn}`} type="submit">
               Edit Crystal
             </button>
           </div>

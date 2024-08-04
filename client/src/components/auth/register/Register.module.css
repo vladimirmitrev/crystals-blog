@@ -16,3 +16,19 @@
     font-size: 1.25rem;
     letter-spacing: 2px;
 }
+
+@media (max-width: 992px) {
+    .registerForm{
+        width: 50vw;
+    }
+}
+@media (max-width: 880px) {
+    .registerForm{
+        width: 60vw;
+    }
+}
+@media (max-width: 768px) {
+    .registerForm{
+        width: 70vw;
+    }
+}
