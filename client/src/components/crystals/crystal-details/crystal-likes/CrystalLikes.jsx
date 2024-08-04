@@ -102,12 +102,13 @@ const CrystalLikes = ({
     };
     return (
         <>
-            {isAuthenticated && (
+           
                 <div className={styles.likesCard}>
                     <div className="text-center">
-                        <div>
                             <h6 className={styles.likesCount}>Likes: ({likesCount ? likesCount : '0'})</h6>
+                        <div>
                         </div>
+                        {isAuthenticated && (
                         <div className={styles.cardLikes}>
                             {_ownerId !== userId && (
                                 <div 
@@ -118,9 +119,10 @@ const CrystalLikes = ({
                             </div>
                             )}
                         </div>
+                        )}
                     </div>
                 </div>
-             )}
+             
         </>
     );
 };

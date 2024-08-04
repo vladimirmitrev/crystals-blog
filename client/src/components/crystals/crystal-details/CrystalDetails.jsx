@@ -23,7 +23,11 @@ const CrystalDetails = () => {
 
     useEffect(() => {
         crystalService.getOne(crystalId)
-            .then(setCrystal);
+            .then(setCrystal)       
+            .catch((err) => {
+            navigate(Path.Home);
+            showNotification(err.message, types.error);
+            })
             
     }, [crystalId]);
 
@@ -37,7 +41,7 @@ const CrystalDetails = () => {
                 navigate(Path.Crystals);
             } catch (err) {
                 showNotification(err.message, types.error);
-                console.log(err.message);
+                // console.log(err.message);
             }
         }
     }
@@ -47,55 +51,36 @@ const CrystalDetails = () => {
                 <h6 className="section-title bg-white text-center text-primary px-3 mt-4">Crystal Details</h6>
             </div>
             <div className="package-item mt-3">
-                <div className="overflow-hidden">
-                <img className={`img-fluid ${styles.cardImage}`} src={crystal.imageUrl} alt="Crystal Image" />
+                <div className="overflow-hidden text-center">
+                    <img className={`img-fluid ${styles.cardImage}`} src={crystal.imageUrl} alt="Crystal Image" />
                 </div>
                 <div className={styles.nameAndLikes}>
-                <h3 className="text-center ml-3 mt-1 mb-1 px-2">{crystal.name}</h3>
-                <CrystalLikes key={crystalId} { ...crystal}/>
+                    <h3 className="text-center ml-3 mt-1 mb-1 ms-3 px-2">{crystal.name}</h3>
+                     <p className="text-dark">Added by: <span className="text-primary">{crystal.owner?.name.split('@')[0]}</span> </p>
+                    <CrystalLikes key={crystalId} { ...crystal}/>
                 </div>
-                {/* <div className="d-flex border-bottom">
-                    <small className="flex-fill text-center border-end py-2">
-                    <FontAwesomeIcon icon={faPalette} />
-                        {crystal.name}
-                    </small>
-                    <small className="flex-fill text-center border-end py-2 text-dark">
-                        <FontAwesomeIcon icon={faPalette} /> Colors: {crystal.color}
-                    </small>
-                    <small className="flex-fill text-center text-dark py-2">
-                    <   FontAwesomeIcon icon={faGem} /> Rarity: {crystal.rarity}
-                    </small>
-                </div> */}
                 <div className="border-top p-4 mt-2">
-                    {/* <div className="mb-3 d-flex">
-                        <p>Rating: </p>
-                        <small className="fa fa-star text-primary"></small>
-                        <small className="fa fa-star text-primary"></small>
-                        <small className="fa fa-star text-primary"></small>
-                        <small className="fa fa-star text-primary"></small>
-                        <small className="fa fa-star text-primary"></small>
-                    </div> */}
-                    <h6><FontAwesomeIcon icon={faPalette} /> Colors</h6>
+                    <h5><FontAwesomeIcon icon={faPalette} /> Colors</h5>
                     <p>{crystal.color}</p>
-                    <h6><FontAwesomeIcon icon={faGem} /> Rarity</h6>
+                    <h5><FontAwesomeIcon icon={faGem} /> Rarity</h5>
                     <p>{crystal.rarity}</p>
-                    <h6><FontAwesomeIcon icon={faShapes} /> Appearance</h6>
+                    <h5><FontAwesomeIcon icon={faShapes} /> Appearance</h5>
                     <p>{crystal.appearance}</p>
-                    <h6><FontAwesomeIcon icon={faSpa} /> Healing powers</h6>
+                    <h5><FontAwesomeIcon icon={faSpa} /> Healing powers</h5>
                     <p>
                     {crystal.healing}
                     </p>
-                    <h6><FontAwesomeIcon icon={faMapMarked} /> Countries where can be found</h6>
+                    <h5><FontAwesomeIcon icon={faMapMarked} /> Countries where can be found</h5>
                     <p>{crystal.source}</p>
 
                     <CrystalComments />
 
                     <div className="d-flex justify-content-center mt-3 mb-2 gap-3">
-                        <Link to={Path.Crystals} className="btn details-btn btn-info rounded-3 mt-2 mt-2 ml-3">Go back to catalog</Link>
+                        <Link to={Path.Crystals} className="btn btn-info rounded-pill px-3 mt-2 mt-2 ml-3">Go back to catalog</Link>
                     { userId === crystal._ownerId && (
                         <div className="buttons d-flex gap-3">
-                            <Link to={pathToUrl(Path.CrystalEdit, { crystalId})} className="btn details-btn btn-warning rounded-3 mt-2 mt-2 ml-3">Edit</Link>
-                            <button className="btn btn-danger rounded-3 mt-2 ml-3" onClick={deleteButtonClickHandler}>Delete</button>
+                            <Link to={pathToUrl(Path.CrystalEdit, { crystalId})} className="btn details-btn btn-warning rounded-pill px-3 mt-2 mt-2 ml-3">Edit Crystal</Link>
+                            <button className="btn btn-danger rounded-pill px-3 mt-2 ml-3" onClick={deleteButtonClickHandler}>Delete Crystal</button>
                         </div>
                     )}
                     </div>

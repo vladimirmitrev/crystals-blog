@@ -6,14 +6,16 @@
     padding: .5rem 3.5rem .5rem 2rem;
     border-radius: .75rem;
     cursor: pointer;
+    z-index: 10000;
+    max-width: 20rem;
 }
 
 .notification.error {
-    background-color: rgb(255, 0, 0);
+    background-color: rgba(255, 0, 0, 0.716);
 }
 
 .notification.warning {
-    background-color: rgba(255, 166, 0, 0.971);
+    background-color: rgba(255, 166, 0, 0.716);
 }
 
 .notification.success {
@@ -21,7 +23,7 @@
 }
 
 .notification.info {
-    background-color: rgb(0, 166, 255);
+    background-color: rgba(0, 166, 255, 0.716);
 }
 
 .notificationMessage {
@@ -38,5 +40,6 @@
 @media (max-width: 600px) {
     .notification {
         right: 1rem;
+        z-index: 10000;
     }
 }

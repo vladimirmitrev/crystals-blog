@@ -5,27 +5,8 @@
     border-right: 1px solid rgba(255, 255, 255, .1);
   }
 
-
-/* @media all and (min-width: 768px) {
-
-    .footer{
-        overflow-x: hidden;
+  @media (max-width: 990px) {
+    .footerCss {
+        position: inherit;
     }
-
-    .footer-content{
-        display: flex;
-    }
-
-    .footer-content-about{
-        margin-bottom: 0;
-        flex: 0 0 60%;
-    }
-
-    .footer-heading{
-        margin-bottom: 3rem;
-    }
-    .social-media-wrap{
-        flex: 0 0 40%;
-        margin-left: 2.5rem;
-    }   
-} */
+}

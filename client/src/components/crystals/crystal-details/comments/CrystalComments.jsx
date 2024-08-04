@@ -96,7 +96,7 @@ const CrystalComments = () => {
 
       {isAuthenticated && (
         <form onSubmit={formik.handleSubmit}>
-            <div className="col-12">
+            <div className="col-xl-6 col-md-8 col-sm-12">
                 <div className="form-floating">
                     <input
                     type="text"
