@@ -1,4 +1,4 @@
-# Crystal Blog React Application
+# :gem: Crystal Blog React Application
 
 ## :pencil2: About The Project
 
