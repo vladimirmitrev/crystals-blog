@@ -11,6 +11,8 @@ import AuthContext from '../../../contexts/authContext';
 
 import { faGem } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Loading from '../../loading/Loading';
+import CrystalEditModal from './confirm-edit-modal/CrystalEditModal';
 
 const CrystalEdit = () => {
   const { showNotification } = useContext(NotificationContext);
@@ -27,6 +29,7 @@ const CrystalEdit = () => {
     imageUrl : '',
   });
   const [loading, setLoading] = useState(true); 
+  const [showEditModal, setShowEditModal] = useState(false);
 
   useEffect(() => {
       crystalService.getOne(crystalId)
@@ -85,24 +88,38 @@ const CrystalEdit = () => {
         .required('Image URL is required'),
     
     }),
-    onSubmit: async (values) => {
-        const crystalData = values;
-        try {
-            await crystalService.edit(crystalId, crystalData);
-            showNotification('You successfully edited the crystal!', types.success);
-            navigate(Path.Crystals);
-        } catch (err) {
-            showNotification(err.message, types.error);
-            // console.log(error);
-        }
-    },
+    onSubmit: async () => {
+        setShowEditModal(true);
+    }, 
   });
 
+  const handleEditConfirmation = async () => {
+    const crystalData = formik.values;
+    try {
+      await crystalService.edit(crystalId, crystalData);
+      showNotification('You successfully edited the crystal!', types.success);
+      navigate(Path.Crystals);
+    } catch (err) {
+      showNotification(err.message, types.error);
+    } finally {
+      setShowEditModal(false); // Close modal after processing
+    }
+  };
+
   if (loading) {
-    return <p>Loading...</p>;
+    return (
+      <Loading />
+    )
   }
   
   return (
+    <>
+    <CrystalEditModal
+        show={showEditModal}
+        name={crystal.name}
+        onClose={() => setShowEditModal(false)}
+        onEdit={handleEditConfirmation}
+      />
     <div
       className={`col-lg-4 col-md-12 wow animated slideInRight ${styles.editForm}`}
       data-wow-delay="2s"
@@ -248,6 +265,7 @@ const CrystalEdit = () => {
         </div>
       </form>
     </div>
+    </>
   );
 };
 
