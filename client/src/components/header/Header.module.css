@@ -23,7 +23,7 @@
     transition: all 1000ms; */
 }
 .welcome {
-    font-size: 20px;
+    /* font-size: 20px; */
     color: blueviolet;
     margin-right: 1rem;
 }
