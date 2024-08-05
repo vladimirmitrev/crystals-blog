@@ -6,6 +6,7 @@ import Loading from '../loading/Loading';
 
 const Weather = () => {
   const [weatherSofia, setWeatherSofia] = useState(null);
+  const [currentDateTime, setCurrentDateTime] = useState(new Date());
 
   useEffect(() => {
     const fetchWeatherData = async (city, setState) => {
@@ -22,7 +23,25 @@ const Weather = () => {
     };
 
     fetchWeatherData('Sofia', setWeatherSofia);
-  }, []);
+
+    const intervalId = setInterval(() => {
+        setCurrentDateTime(new Date());
+    }, 60000);
+
+    return () => clearInterval(intervalId);
+    }, []);
+
+    const formatDateTime = (date) => {
+    const options = {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+    };
+    return date.toLocaleDateString('en-UK', options);
+    };
 
   return (
     <div>
@@ -36,6 +55,7 @@ const Weather = () => {
               alt="Weather icon"
             />
             <p id="box-a-temp">{Math.round(weatherSofia.main.temp - 273.15)}°C</p>
+            <p>{formatDateTime(currentDateTime)}</p> {/* Display the formatted date and time */}
             <Link to='https://www.accuweather.com/bg/bg/sofia/51097/weather-forecast/51097' target='_blank' className='text-primary'>Click Here For More Weather Details</Link>
           </>
         ) : (
