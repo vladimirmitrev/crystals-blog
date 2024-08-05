@@ -1,6 +1,7 @@
 import styles from './ContactUs.module.css';
 import { faEnvelope, faMapMarked, faMapMarkerAlt, faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Weather from '../weather/Weather';
 
 const ContactUs = () => {
   return (
@@ -14,7 +15,7 @@ const ContactUs = () => {
             <h3 className='mt-3 animated fadeInUp'>Find us on the map <FontAwesomeIcon icon={faMapMarked} /></h3>
           </div>
           <div className="row g-4 mt-3">
-            <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+            <div className="col-lg-3 col-md-3 wow fadeInUp" data-wow-delay="0.1s">
               <h5>Get In Touch</h5>
               <p className="mb-4">
                 Feel free to get in with contact us
@@ -53,7 +54,7 @@ const ContactUs = () => {
                 </div>
               </div>
             </div>
-            <div className="col-lg-6 col-md-6 wow animated zoomIn"
+            <div className="col-lg-6 col-md-4 wow animated zoomIn"
               data-wow-delay="0.3s">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d733.1507144244055!2d23.31867166960763!3d42.690954198197744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa8512dcf84a4b%3A0xf6be7685a7a42b0a!2sSofia%20Center%2C%20Vitosha%20Blvd%2044%2C%201000%20Sofia!5e0!3m2!1sen!2sbg!4v1722413966277!5m2!1sen!2sbg"
@@ -62,6 +63,10 @@ const ContactUs = () => {
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
+            </div>
+            <div className="col-lg-3 col-md-4 wow fadeInUp"
+              data-wow-delay="0.5s">
+            <Weather />
             </div>
             {/* <div
               className="col-lg-4 col-md-12 wow fadeInUp"
