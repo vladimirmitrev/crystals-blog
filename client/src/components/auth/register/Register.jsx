@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import AuthContext from '../../../contexts/authContext';
 import { Link } from 'react-router-dom';
 import Path from '../../../paths';
@@ -6,11 +6,13 @@ import styles from './Register.module.css';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 
-import { faUserCheck } from "@fortawesome/free-solid-svg-icons";
+import { faUserCheck, faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Register = () => {
   const { registerSubmitHandler } = useContext(AuthContext);
+  const [visible, setVisible] = useState(false);
+
   const formik = useFormik({
     initialValues: {
       name: '',
@@ -24,7 +26,10 @@ const Register = () => {
         .min(6, 'Name should be at least 6 characters')
         .max(30, 'Name should be no longer than 30 characters')
         .required('Name is required'),
-      email: Yup.string().email('Invalid email address').required('Email is required'),
+      email: Yup.string().email('Invalid email address')
+        .min(4, 'Email should be at least 4 characters')
+        .max(30, 'Email should be no longer than 30 characters')
+        .required('Email is required'),
       phone: Yup.string().required('Phone is required').matches(/^[+]?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{2}[-\s.]?[0-9]{4,7}$/im, 'Must be valid phone number'),
       // phone: Yup.number().required('Phone is required'),
       password: Yup.string()
@@ -102,9 +107,9 @@ const Register = () => {
             </div>
           </div>
           <div className="col-12">
-            <div className="form-floating">
+          <div className={`form-floating ${styles.passwordInput}`}>
               <input
-                type="password"
+                type={visible ? "text" : "password"}
                 className="form-control"
                 id="password"
                 placeholder="Password"
@@ -113,6 +118,12 @@ const Register = () => {
                 onBlur={formik.handleBlur}
                 value={formik.values.password}
               />
+               {formik.values.password && (
+                    <div className={styles.eyeIcon}
+                    onClick={() => setVisible(!visible)}>
+                    {visible ? <FontAwesomeIcon icon={faEye} /> : <FontAwesomeIcon icon={faEyeSlash} />}
+                  </div>
+                )}
               {formik.touched.password && formik.errors.password ? (
                 <p className={styles.inputError}>{formik.errors.password}</p>
               ) : null}
@@ -120,9 +131,9 @@ const Register = () => {
             </div>
           </div>
           <div className="col-12">
-            <div className="form-floating">
+          <div className={`form-floating ${styles.passwordInput}`}>
               <input
-                type="password"
+                type={visible ? "text" : "password"}
                 className="form-control"
                 id="confirmPassword"
                 placeholder="Confirm password"
@@ -131,6 +142,12 @@ const Register = () => {
                 onBlur={formik.handleBlur}
                 value={formik.values.confirmPassword}
               />
+               {formik.values.confirmPassword && (
+                    <div className={styles.eyeIcon}
+                    onClick={() => setVisible(!visible)}>
+                    {visible ? <FontAwesomeIcon icon={faEye} /> : <FontAwesomeIcon icon={faEyeSlash} />}
+                  </div>
+                )}
               {formik.touched.confirmPassword && formik.errors.confirmPassword ? (
                 <p className={styles.inputError}>{formik.errors.confirmPassword}</p>
               ) : null}

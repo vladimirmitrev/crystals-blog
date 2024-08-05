@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import AuthContext from '../../../contexts/authContext';
 import { Link } from 'react-router-dom';
 import Path from '../../../paths';
@@ -6,12 +6,13 @@ import styles from './Login.module.css';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 
-import { faUserLock } from "@fortawesome/free-solid-svg-icons";
+import { faUserLock, faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 const Login = () => {
   const { loginSubmitHandler } = useContext(AuthContext);
+  const [visible, setVisible] = useState(false);
 
   const formik = useFormik({
     initialValues: {
@@ -57,9 +58,9 @@ const Login = () => {
               </div>
             </div>
             <div className="col-12">
-              <div className="form-floating">
+            <div className={`form-floating ${styles.passwordInput}`}>
                 <input
-                  type="password"
+                  type={visible ? "text" : "password"}
                   className="form-control"
                   id="password"
                   placeholder="Password"
@@ -68,6 +69,12 @@ const Login = () => {
                   onBlur={formik.handleBlur}
                   value={formik.values.password}
                 />
+                {formik.values.password && (
+                    <div className={styles.eyeIcon}
+                    onClick={() => setVisible(!visible)}>
+                    {visible ? <FontAwesomeIcon icon={faEye} /> : <FontAwesomeIcon icon={faEyeSlash} />}
+                  </div>
+                )}
                 {formik.touched.password && formik.errors.password ? (
                 <p className={styles.inputError}>{formik.errors.password}</p>
               ) : null}

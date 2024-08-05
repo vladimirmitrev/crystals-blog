@@ -17,6 +17,17 @@
     letter-spacing: 2px;
 }
 
+.eyeIcon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.passwordInput {
+    position: 'relative';
+}
+
 @media (max-width: 992px) {
     .registerForm{
         width: 50vw;
