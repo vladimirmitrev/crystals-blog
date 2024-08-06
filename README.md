@@ -92,3 +92,21 @@ Interactive Features: Users can comment on and like their favorite crystals, all
 Personalized Experience: Create and manage user profiles, allowing for personalized interaction with the content and community.
 
 Seamless Navigation: Utilize a responsive design and smooth navigation to ensure a seamless user experience across all devices.
+
+# :camera: Screenshots
+
+![Image Alt text](/github_images/home.png?raw=true)
+![Image Alt text](/github_images/crystals-catalog.png?raw=true)
+![Image Alt text](/github_images/crystal-like.png?raw=true)
+![Image Alt text](/github_images/comments.png?raw=true)
+![Image Alt text](/github_images/search-1.png?raw=true)
+![Image Alt text](/github_images/search.-2png.png?raw=true)
+![Image Alt text](/github_images/register.png?raw=true)
+![Image Alt text](/github_images/login.png?raw=true)
+![Image Alt text](/github_images/contact.png?raw=true)
+![Image Alt text](/github_images/about.png?raw=true)
+![Image Alt text](/github_images/user-profile.png?raw=true)
+![Image Alt text](/github_images/responsive-1.png?raw=true)
+![Image Alt text](/github_images/responsive-2.png?raw=true)
+![Image Alt text](/github_images/responsive-3.png?raw=true)
+![Image Alt text](/github_images/responsive-4.png?raw=true)
