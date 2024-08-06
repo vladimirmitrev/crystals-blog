@@ -60,7 +60,7 @@ Register users can go to:
   :white_medium_small_square: Users can make likes, dislikes and comments to a crystal.
 
 
-## <code style="color : purple">Technologies and Libraries Used</code>
+# 🛠️ Technologies and Libraries Used
 
 ## Front-end
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
@@ -82,7 +82,7 @@ Register users can go to:
 
 - [SoftUni practice server](https://github.com/softuni-practice-server/softuni-practice-server)
 
-# 🛠️ Application Overview
+# :scroll: Application Overview
 The Crystal Blog provides a user-friendly, interactive, and visually appealing platform with features that allow users to:
 
 Explore Crystals: View detailed information about various crystals, including their appearance, rarity, sources, and healing properties.
