@@ -1,5 +1,7 @@
 # :gem: Crystal Blog React Application
 
+## Deployed to Firebase ** https://crystal-blog-bf7ac.web.app/ **
+
 # 📖 About The Project
 This is an SAP (Single Page Application) designed to provide users with a comprehensive platform for exploring and interacting with information about crystals. The Crystal Blog allows enthusiasts and casual users alike to discover the mystical and healing properties of various crystals, as well as to share their insights and experiences.
 
