@@ -38,8 +38,8 @@ https://github.com/vladimirmitrev/crystals-blog.git
  <br/>
 
  * Test users
-   :white_medium_small_square: email: peter@gmail.com  password: 123456
-   :white_medium_small_square: email: george@gmail.com  password: 123456
+   * email: peter@gmail.com  password: 123456
+   * email: george@gmail.com  password: 123456
    
 # :earth_asia: Public
 
