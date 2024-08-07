@@ -6,7 +6,6 @@ import { NotificationContext } from '../../contexts/NotificationContext';
 
 const Notification = () => {
     const { notification, hideNotification } = useContext(NotificationContext);
-    console.log(notification.message)
 
     return (
         <div className={`${styles.notification} ${styles[notification.type]}`} onClick={ hideNotification }>

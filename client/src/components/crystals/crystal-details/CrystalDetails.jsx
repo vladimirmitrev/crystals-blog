@@ -44,7 +44,6 @@ const CrystalDetails = () => {
                 navigate(Path.Crystals);
             } catch (err) {
                 showNotification(err.message, types.error);
-                // console.log(err.message);
             } 
         }
 

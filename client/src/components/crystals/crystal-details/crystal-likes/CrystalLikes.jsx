@@ -54,7 +54,6 @@ const CrystalLikes = ({
     const likeCrystal = async () => {
         const isLiked = true;
         let newLike;
-        console.log(`Current like is ${like}`);
         try {
             if ( like?.isLiked === false) {
                 newLike = await likeService.editPreviouslyLiked(crystalId, isLiked);
@@ -70,13 +69,12 @@ const CrystalLikes = ({
             })
         } catch (err) {
             showNotification(err.message, types.error);
-            console.log(err);
         }
     };
 
     const dislikeCrystal = async () => {
         if (!like) {
-            // console.log('No like to dislike');
+            console.log('No like to dislike');
             return;
         }
         const likeId = like._id;
@@ -97,7 +95,6 @@ const CrystalLikes = ({
 
         } catch (err) {
             showNotification(err.message, types.error);
-            console.log(err);
         }
     };
     return (

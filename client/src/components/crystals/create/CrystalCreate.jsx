@@ -62,7 +62,6 @@ const CreateCrystal = () => {
             navigate(Path.Crystals);
         } catch (err) {
             showNotification(err.message, types.error);
-            // console.log(error);
         }
     },
   });

@@ -12,7 +12,7 @@ const Weather = () => {
     const fetchWeatherData = async (city, setState) => {
       try {
         const response = await fetch(
-          `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=8dd1b8c6c70655b59ef4f75b4d9fb753`
+          `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=8dd1b8c6c70655b59ef4f75b4d9fb753`
         );
 
         const info = await response.json();

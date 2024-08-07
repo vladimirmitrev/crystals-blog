@@ -52,7 +52,6 @@ const Search = () => {
             try {
                 name ? result =  await crystalService.searchByName(name) : result =  await crystalService.searchByHealing(healing);
                 setAllCrystals(result);
-                // console.log(result);
             } catch (err) {
                 // showNotification(err.message, types.error);
             }

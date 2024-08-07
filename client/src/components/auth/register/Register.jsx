@@ -41,7 +41,6 @@ const Register = () => {
     }),
     onSubmit: (values) => {
       registerSubmitHandler(values);
-      // console.log(values);
     },
   });
   return (

@@ -50,6 +50,12 @@
     /* font-size: 1.25rem; */
     letter-spacing: 2px;
 }
+.pagination {
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+    justify-content: center;
+}
 
 @media (max-width: 768px) {
     .commentLi {

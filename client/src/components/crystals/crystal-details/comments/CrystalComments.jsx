@@ -61,7 +61,6 @@ const CrystalComments = () => {
               showNotification('You successfully added a new comment!', types.success);
           } catch (err) {
               showNotification(err.message, types.error);
-              console.log(err);
           }
       },
     });

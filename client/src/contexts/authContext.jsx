@@ -15,7 +15,6 @@ export const AuthProvider = ({
   const navigate = useNavigate();
   const [auth, setAuth] = usePersistedState('auth', {});
   const { showNotification } = useContext(NotificationContext);
-//   console.log(showNotification);
 
   const loginSubmitHandler = async (values) => {
     try {
