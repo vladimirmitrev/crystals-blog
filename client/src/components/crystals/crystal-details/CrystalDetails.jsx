@@ -86,8 +86,10 @@ const CrystalDetails = () => {
                 <p>{crystal.source}</p>
 
                 <CrystalComments />
-                <div className="d-flex justify-content-center mt-3 mb-2 gap-3">
-                    <Link to={Path.Crystals} className="btn btn-info rounded-pill px-3 mt-2 mt-2 ml-3">Go back to catalog</Link>
+                <div className="d-flex justify-content-center mt-5 mb-2 gap-3">
+                    <div className={`team-item ${styles.btnDiv}`}>
+                    <Link to={Path.Crystals} className="btn btn-primary rounded-pill px-3 mt-2 mt-2 ml-3">Go back to catalog</Link>
+                    </div>
                 { userId === crystal._ownerId && (
                     <div className="buttons d-flex gap-3">
                         <Link to={pathToUrl(Path.CrystalEdit, { crystalId})} className="btn details-btn btn-warning rounded-pill px-3 mt-2 mt-2 ml-3">Edit Crystal</Link>

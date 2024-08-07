@@ -112,7 +112,7 @@ const CrystalComments = () => {
                     {formik.errors.text ? (
                     <p className={styles.inputError}>{formik.errors.text}</p>
                     ) : null}
-                    <button className={`btn btn-primary w-100 py-3 mt-2 ${styles.addCommentBtn}`} type="submit">
+                    <button className={`btn btn-info w-100 py-3 mt-2 ${styles.addCommentBtn}`} type="submit">
                     Add comment
                     </button>
                 </div>

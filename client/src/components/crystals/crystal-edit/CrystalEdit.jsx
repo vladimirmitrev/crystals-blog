@@ -255,9 +255,11 @@ const CrystalEdit = () => {
             </div>
           </div>
           <div className="col-12 d-flex gap-3 justify-content-around">
-            <Link to={pathToUrl(Path.CrystalDetails, { crystalId })} 
-                className="btn details-btn btn-info rounded-pill">Back to crystal details
-            </Link>
+            <div className={`team-item ${styles.btnDiv}`}>
+                <Link to={pathToUrl(Path.CrystalDetails, { crystalId })}
+                    className="btn details-btn btn-primary rounded-pill">Back to crystal details
+                </Link>
+            </div>
             <button className={`btn btn-warning w-100 py-3 ${styles.editBtn}`} type="submit">
               Edit Crystal
             </button>

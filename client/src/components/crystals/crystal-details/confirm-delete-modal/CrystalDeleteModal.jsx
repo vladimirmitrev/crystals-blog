@@ -15,7 +15,7 @@ const CrystalDeleteModal = ({
                 </div>
                 <div className="modal-footer d-flex justify-content-between">
                     <button type="button" className="btn btn-primary rounded-pill" data-dismiss="modal" onClick={onClose} data-target="#deleteModal">Close</button>
-                    <button type="button" className="btn btn-danger rounded-pill" onClick={onDelete}>Confirm</button>
+                    <button type="button" className="btn btn-warning rounded-pill" onClick={onDelete}>Confirm</button>
                 </div>
             </div>
         </div>
