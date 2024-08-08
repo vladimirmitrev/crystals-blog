@@ -1329,6 +1329,11 @@
     			name: "George Georgiev",
     			hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1"
     		},
+            "a7a40848-27b1-4a91-a5c6-0d99049daba8": {
+    			email: "maria@gmail.com",
+    			name: "Maria Ilieva",
+    			hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1"
+    		},
     		"60f0cf0b-34b0-4abd-9769-8c42f830dffc": {
     			email: "admin@gmail.com",
     			name: "Admin Adminov",
@@ -1557,7 +1562,63 @@
     			recipeId: "8f414b4f-ab39-4d36-bedb-2ad69da9c830",
     			_createdOn: 1614260681375,
     			_id: "0a272c58-b7ea-4e09-a000-7ec988248f66"
-    		}
+    		},
+            "5fb81733-c811-41fe-a2bb-14fce02f3ea6": {
+                _ownerId: "a7a40848-27b1-4a91-a5c6-0d99049daba8",
+                crystalId: "d4189831-b37b-4c6a-89be-0f091011ll55",
+                text: "Very beautiful crystal! 😍",
+                _createdOn: 1723102545368,
+                _id: "5fb81733-c811-41fe-a2bb-14fce02f3ea6"
+            },
+            "1b7dce63-27c2-45b3-b3bb-ef19dd3d1fff": {
+                _ownerId: "a7a40848-27b1-4a91-a5c6-0d99049daba8",
+                crystalId: "d4189831-b37b-4c6a-89be-0f091033vv44",
+                text: "What a magical crystal!",
+                _createdOn: 1723102926913,
+                _id: "1b7dce63-27c2-45b3-b3bb-ef19dd3d1fff"
+            },
+            "74aff2d1-c674-45d9-b95e-467038df71e9": {
+                _ownerId: "a7a40848-27b1-4a91-a5c6-0d99049daba8",
+                crystalId: "cbb585ae-e630-42b7-84a3-6c092a62842a",
+                text: "I love it!",
+                _createdOn: 1723103246237,
+                _id: "74aff2d1-c674-45d9-b95e-467038df71e9"
+            },
+            "72ad43cb-e178-4e0a-8406-15b9bca43c44": {
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                crystalId: "d4189831-b37b-4c6a-89be-0f091011ll55",
+                text: "Wow amazing healing powers!",
+                _createdOn: 1723103491477,
+                _id: "72ad43cb-e178-4e0a-8406-15b9bca43c44"
+            },
+            "f014b32d-061c-4a0c-8976-0d34f663f22f": {
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                crystalId: "05682dfb-bfc2-4fbb-9785-958dc8453d65",
+                text: "Can't wait to get one of those!",
+                _createdOn: 1723103682303,
+                _id: "72ad43cb-e178-4e0a-8406-15b9bca43c44"
+            },
+            "2275cb6a-6647-40a3-b2fd-732717e965e0": {
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                crystalId: "d4189831-b37b-4c6a-89be-0f091029eg22",
+                text: "Very popular, all the celebrities wear it against negative energy!",
+                _createdOn: 1723103969695,
+                _id: "2275cb6a-6647-40a3-b2fd-732717e965e0"
+            },
+            "003044fe-8f53-499e-b765-6a3f3985b6dc": {
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                crystalId: "d4189831-b37b-4c6a-89be-0f091029fb01",
+                text: "If you want to attract more money, using Citrine can be an easy way to align your energy with financial success.",
+                _createdOn: 1723104289703,
+                _id: "003044fe-8f53-499e-b765-6a3f3985b6dc"
+            },
+            "003044fe-8f53-499e-b765-6a3f3985asd7": {
+                _ownerId: "a7a40848-27b1-4a91-a5c6-0d99049daba8",
+                crystalId: "d4189831-b37b-4c6a-89be-0f091029fb09",
+                text: "I heard it is like a shield for negative energy!",
+                _createdOn: 1723104285403,
+                _id: "003044fe-8f53-499e-b765-6a3f3985asd7"
+            },
     	},
     	records: {
     		i01: {
@@ -1666,6 +1727,69 @@
     		}
     	},
     	likes: {
+            "29ac87ad-942a-4e45-9405-d157c7c0ee6e": {
+                _ownerId: "a7a40848-27b1-4a91-a5c6-0d99049daba8",
+                crystalId: "334aad36-39d6-41fb-84de-ced140762d82",
+                isLiked: true,
+                _createdOn: 1723102525083,
+                _id: "29ac87ad-942a-4e45-9405-d157c7c0ee6e"
+            },
+            "53da0ef4-09d3-42cd-9134-a4b82ca66c42": {
+                _ownerId: "a7a40848-27b1-4a91-a5c6-0d99049daba8",
+                crystalId: "d4189831-b37b-4c6a-89be-0f091033vv44",
+                isLiked: true,
+                _createdOn: 1723102525083,
+                _id: "53da0ef4-09d3-42cd-9134-a4b82ca66c42"
+            },
+            "67ebd9ac-185f-4942-9916-72143255a2e7": {
+                _ownerId: "a7a40848-27b1-4a91-a5c6-0d99049daba8",
+                crystalId: "d4189831-b37b-4c6a-89be-0f091011ll55",
+                isLiked: true,
+                _createdOn: 1723102551888,
+                _id: "67ebd9ac-185f-4942-9916-72143255a2e7"
+            },
+            "b5808d29-3777-4616-86d7-666edaa25352": {
+                _ownerId: "a7a40848-27b1-4a91-a5c6-0d99049daba8",
+                crystalId: "d4189831-b37b-4c6a-89be-0f091029fb09",
+                isLiked: true,
+                _createdOn: 1723103340989,
+                _id: "b5808d29-3777-4616-86d7-666edaa25352"
+            },
+            "c58dec67-5203-436c-9fe4-a06ce58f62d8": {
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                crystalId: "d4189831-b37b-4c6a-89be-0f091011ll55",
+                isLiked: true,
+                _createdOn: 1723103430763,
+                _id: "c58dec67-5203-436c-9fe4-a06ce58f62d8"
+            },
+            "bbc248b9-24ea-4926-a76a-8c594472476b": {
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                crystalId: "05682dfb-bfc2-4fbb-9785-958dc8453d65",
+                isLiked: true,
+                _createdOn: 1723103607845,
+                _id: "bbc248b9-24ea-4926-a76a-8c594472476b"
+            },
+            "6afd8821-70d6-4928-8bb6-5eab51789060": {
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                crystalId: "d4189831-b37b-4c6a-89be-0f091033vm22",
+                isLiked: true,
+                _createdOn: 1723104070115,
+                _id: "6afd8821-70d6-4928-8bb6-5eab51789060"
+            },
+            "7a93dfc4-0743-4c67-acc6-246ed76dcc4c": {
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                crystalId: "d4189831-b37b-4c6a-89be-0f091029fb01",
+                isLiked: true,
+                _createdOn: 1723104157249,
+                _id: "7a93dfc4-0743-4c67-acc6-246ed76dcc4c"
+            },
+            "7a93dfc4-0743-4c67-acc6-246ed76dcr7c": {
+                _ownerId: "a7a40848-27b1-4a91-a5c6-0d99049daba8",
+                crystalId: "cbb585ae-e630-42b7-84a3-6c092a62842a",
+                isLiked: true,
+                _createdOn: 1723104157259,
+                _id: "7a93dfc4-0743-4c67-acc6-246ed76dcr7c"
+            },
     	},
     	ideas: {
     		"833e0e57-71dc-42c0-b387-0ce0caf5225e": {
