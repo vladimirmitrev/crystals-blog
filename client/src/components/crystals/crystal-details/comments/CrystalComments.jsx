@@ -39,6 +39,7 @@ const CrystalComments = () => {
       },
       validationSchema: Yup.object({
         text: Yup.string()
+          .trim()
           .min(6, 'Comment should be at least 6 characters')
           .max(256, 'Comment should be no longer than 256 characters')
           .required('Required')

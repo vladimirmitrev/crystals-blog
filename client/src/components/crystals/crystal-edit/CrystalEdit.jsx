@@ -61,26 +61,32 @@ const CrystalEdit = () => {
         },
     validationSchema: Yup.object({
       name: Yup.string()
+        .trim()
         .min(3, 'Name should be at least 3 characters')
         .max(30, 'Name should be no longer than 30 characters')
         .required('Name is required'),
       color: Yup.string()
+        .trim()
         .min(3, 'Color should be at least 3 characters')
         .max(64, 'Color should be no longer than 64 characters')
         .required('Color is required'),
         appearance: Yup.string()
+        .trim()
         .min(4, 'Appearance should be at least 4 characters')
         .max(256, 'Appearance should be no longer than 256 characters')
         .required('Appearance is required'),
         rarity: Yup.string()
+        .trim()
         .min(3, 'Rarity should be at least 3 characters')
         .max(128, 'Rarity should be no longer than 128 characters')
         .required('Source is required'),
         source: Yup.string()
+        .trim()
         .min(3, 'Source should be at least 3 characters')
         .max(128, 'Source should be no longer than 128 characters')
         .required('Source is required'),
         healing: Yup.string()
+        .trim()
         .min(6, 'Healing should be at least 6 characters')
         .max(2048, 'Healing should be no longer than 2048 characters')
         .required('Healing is required'),

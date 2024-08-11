@@ -23,6 +23,7 @@ const Register = () => {
     },
     validationSchema: Yup.object({
       name: Yup.string()
+        .trim('The name cannot include leading and trailing spaces')
         .min(6, 'Name should be at least 6 characters')
         .max(30, 'Name should be no longer than 30 characters')
         .required('Name is required'),
@@ -33,9 +34,11 @@ const Register = () => {
       phone: Yup.string().required('Phone is required').matches(/^[+]?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{2}[-\s.]?[0-9]{4,7}$/im, 'Must be valid phone number'),
       // phone: Yup.number().required('Phone is required'),
       password: Yup.string()
+        .trim()
         .min(6, 'Password should be at least 6 characters')
         .max(32, 'Password should be no longer than 30 characters').required('Password is required'),
       confirmPassword: Yup.string()
+      .trim()
       .oneOf([Yup.ref('password')], 'Passwords must match')
       .required('Confirm password is required')
     }),

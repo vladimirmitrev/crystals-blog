@@ -36,10 +36,12 @@ const Search = () => {
         },
         validationSchema: Yup.object({
           name: Yup.string()
+            .trim()
             .min(1, 'Search by name should be at least 1 character')
             .max(32, 'Search by name should be no longer than 32 characters'),
             // .required('Search by name should be at least 1 character'),
           healing: Yup.string()
+            .trim()
             .min(1, 'Healing should be at least 1 characters')
             .max(32, 'Healing should be no longer than 30 characters')
             // .required('Healing is required'),
